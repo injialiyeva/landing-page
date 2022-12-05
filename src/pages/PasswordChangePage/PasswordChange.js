@@ -67,7 +67,7 @@ function PasswordChange() {
               <div class="password">
                 <label for="psw">
                   Yeni şifrə <span>*</span>
-                  <div class="input">
+                  <div className="psw-change-input">
                     <input
                       type={passwordShown ? "text" : "password"}
                       id="psw"
@@ -87,7 +87,7 @@ function PasswordChange() {
               <div class="password">
                 <label for="psw-again">
                   Şifrə təkrarı <span>*</span>
-                  <div class="input">
+                  <div className="psw-change-input">
                     <input
                       type={passwordShown ? "text" : "password"}
                       id="psw-again"

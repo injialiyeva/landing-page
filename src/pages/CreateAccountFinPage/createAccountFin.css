@@ -100,7 +100,7 @@ label div {
   display: flex;
 }
 
-input {
+#input {
   width: 381px;
   height: 48px;
   background: #fafbff;
@@ -111,6 +111,10 @@ input {
   font-weight: 274;
   font-size: 16px;
   line-height: 24px;
+}
+
+.invalid {
+  border: 1px solid red;
 }
 
 .errorMessage {
@@ -135,12 +139,22 @@ input {
 }
 
 .info-btn {
-  margin-left: -28px;
-  margin-top: 18px;
+  position: relative;
+  top: 18px;
   border: none;
   width: 16px;
   height: 16px;
   background-color: #fafbff;
+}
+
+.popup-icon path {
+  stroke: red;
+}
+
+.error-fin-popup {
+  position: absolute;
+  top: 0px;
+  left: 0px;
 }
 
 .submit {

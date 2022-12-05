@@ -68,6 +68,7 @@ function Login() {
                   FİN kod <span>*</span>
                   <div>
                     <input
+                      className="login-input"
                       type="text"
                       id="username"
                       required
@@ -79,7 +80,7 @@ function Login() {
                       onClick={handleClick}
                     >
                       <img
-                        className="popup-icon"
+                        className="login-popup-icon"
                         src="/images/general icons (2).svg"
                         alt=""
                       />
@@ -117,6 +118,7 @@ function Login() {
                   Şifrə <span>*</span>
                   <div>
                     <input
+                      className="login-input"
                       type={passwordShown ? "text" : "password"}
                       id="psw"
                       required

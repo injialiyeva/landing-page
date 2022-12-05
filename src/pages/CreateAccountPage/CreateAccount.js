@@ -27,30 +27,43 @@ function CreateAccount() {
   const handleSubmit = (event) => {
     event.preventDefault();
 
-    navigate("/OTP");
+    navigate("/CreatePassword");
+  };
+
+  const [otp, setOtp] = useState(false);
+  const handleClickOpen = () => {
+    setOtp(!otp);
+  };
+
+  const closeOtp = () => {
+    setOtp(false);
+  };
+
+  const handleFocus = (e) => {
+    if (e.target.nextSibling) e.target.nextSibling.focus();
   };
 
   return (
     <div>
-      <div class="main-container">
-        <div class="left">
+      <div className="main-container otp-background">
+        <div className="left">
           <img
-            class="background-img"
+            className="background-img"
             src="/images/leftside background.svg"
             alt=""
           />
-          <div class="logo">
+          <div className="logo">
             <img src="/images/ferrum logo 1.svg" alt="logo" />
           </div>
         </div>
         <div className="right">
-          <div class="right-con">
-            <div class="create-acc">
-              <div class="create-acc-header">
-                <div class="back-btn">
+          <div className="right-con">
+            <div className="create-acc">
+              <div className="create-acc-header">
+                <div className="back-btn">
                   <button>
                     <img
-                      class="back-icon"
+                      className="back-icon"
                       src="/images/general icons.svg"
                       alt=""
                     />
@@ -58,20 +71,27 @@ function CreateAccount() {
                 </div>
                 <h1>Hesab yaradın</h1>
               </div>
-              <form onSubmit={handleSubmit} class="registerForm" action="">
-                <div class="name">
-                  <label for="name">
+              <form onSubmit={handleSubmit} className="registerForm" action="">
+                <div className="name">
+                  <label htmlFor="name">
                     Ad <span>*</span>
                     <div>
-                      <input type="text" id="name" required placeholder="Ad" />
+                      <input
+                        className="crt-acc-input"
+                        type="text"
+                        id="name"
+                        required
+                        placeholder="Ad"
+                      />
                     </div>
                   </label>
                 </div>
-                <div class="surname">
-                  <label for="surname">
+                <div className="surname">
+                  <label htmlFor="surname">
                     Soyad <span>*</span>
                     <div>
                       <input
+                        className="crt-acc-input"
                         type="text"
                         id="surname"
                         required
@@ -80,24 +100,62 @@ function CreateAccount() {
                     </div>
                   </label>
                 </div>
-                <div class="fin-code">
-                  <label for="fin-code">
+                <div className="fin-code">
+                  <label htmlFor="fin-code">
                     FİN kod <span>*</span>
                     <div>
                       <input
+                        className="crt-acc-input"
                         type="text"
                         id="fin-code"
                         required
                         placeholder="A417290NMA"
                       />
+                      <button
+                        type="button"
+                        className="info-btn"
+                        onClick={handleClick}
+                      >
+                        <img
+                          className="popup-icon"
+                          src="/images/general icons (2).svg"
+                          alt=""
+                        />
+                      </button>
                     </div>
                   </label>
+                  <div className={isActive ? "fin-popup" : "hidden"}>
+                    <div className="fin-popup-header">
+                      <img
+                        className="fin-popup-icon"
+                        src="/images/general icons(4).svg"
+                      />
+                      <p className="fin-nedir">FİN nədir?</p>
+                      <button
+                        type="button"
+                        className={isActive ? "popup-cancel" : "hidden"}
+                        onClick={cancelClick}
+                      >
+                        <img src="/images/general icons(5).svg" />
+                      </button>
+                    </div>
+                    <div className="fin-popup-txt">
+                      <p>
+                        FİN kod 7 simvoldan ibarətdir və axırıncı sətirdə
+                        göstərilən son səkkiz simvolun ilk yeddisi təşkil edir.
+                      </p>
+                    </div>
+                    <div>
+                      <img src="/images/vəsiqə foto.svg" />
+                    </div>
+                  </div>
                 </div>
-                <div class="mob-num">
-                  <label for="mob-num">
+                <div className="mob-num">
+                  <label htmlFor="mob-num">
                     Mobil nömrə <span>*</span>
                     <div>
                       <input
+                        className="crt-acc-input"
                         type="number"
                         id="mob-num"
                         required
@@ -106,12 +164,17 @@ function CreateAccount() {
                     </div>
                   </label>
                 </div>
-                <div class="submit">
-                  <button type="submit" class="continue-btn">
+                <div className="submit">
+                  <button
+                    type="submit"
+                    className="continue-btn"
+                    onClick={handleClickOpen}
+                  >
                     Davam et
                   </button>
                 </div>
-                <div class="login">
+
+                <div className="login">
                   <p>
                     Ferrum kabinetin var?
                     <Link to={"/Login"}>
@@ -123,6 +186,64 @@ function CreateAccount() {
             </div>
           </div>
         </div>
+
+        {otp ? (
+          <div id="overlay" className="otp">
+            <form action="">
+              <div className="otp-header">
+                <p>OTP kodu daxil edin</p>
+                <button type="submit" onClick={closeOtp}>
+                  <img src="/images/close-circle.svg" alt="" />
+                </button>
+              </div>
+              <div className="otp-txt">
+                <p>
+                  +994 (**) *** ** 78 nömrəsinə göndərilən bir dəfəlik şifrəni
+                  daxil edin:
+                </p>
+              </div>
+              <div className="otp-code">
+                <input
+                  onChange={handleFocus}
+                  autoFocus={true}
+                  className="otp-inputs"
+                  type="number"
+                  name=""
+                  id=""
+                />
+                <input
+                  onChange={handleFocus}
+                  className="otp-inputs"
+                  type="number"
+                  name=""
+                  id=""
+                />
+                <input
+                  onChange={handleFocus}
+                  className="otp-inputs"
+                  type="number"
+                  name=""
+                  id=""
+                />
+                <input
+                  onChange={handleFocus}
+                  className="otp-inputs"
+                  type="number"
+                  maxLength={1}
+                  name=""
+                  id=""
+                />
+              </div>
+              <div className="otb-submit">
+                <button type="submit" className="otb-submit-btn">
+                  Tamamla
+                </button>
+              </div>
+            </form>
+          </div>
+        ) : (
+          ""
+        )}
       </div>
     </div>
   );

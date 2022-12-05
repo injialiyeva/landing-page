@@ -96,7 +96,7 @@ label span {
   color: red;
 }
 
-input {
+.login-input {
   width: 381px;
   height: 48px;
   background: #fafbff;
@@ -120,7 +120,7 @@ input {
   color: #b8b9b9;
 }
 
-.input {
+.login-input {
   display: flex;
 }
 
@@ -132,7 +132,7 @@ input {
   background-color: #fafbff;
 }
 
-.popup-icon {
+.login-popup-icon {
   margin-bottom: -3px;
 }
 

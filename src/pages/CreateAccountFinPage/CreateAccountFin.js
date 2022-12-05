@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useRef } from "react";
 import "./createAccountFin.css";
 import { Link } from "react-router-dom";
 import { useNavigate } from "react-router-dom";
@@ -32,14 +32,28 @@ function CreateAccountFin() {
   };
 
   const [errorMessage, setErrorMessage] = useState("");
+  const [errorActive, setErrorActive] = useState(false);
+  //   const [toggleClass, setToggleClass] = useState(false);
+  //  const handleToggle = () => {
+  //       setToggleClass(!toggleClass);
+  //     };
 
-  const handleChange = () => {
-    setErrorMessage("Belə bir FİN kod mövcud deyil, bir daha sınayın.");
+  const handleFinChange = (event) => {
+    // console.log(event.target.value.length);
+    if (event.target.value.length < 7) {
+      setErrorMessage("Belə bir FİN kod mövcud deyil, bir daha sınayın.");
+      event.target.style.border = "1px solid red";
+      setErrorActive((current) => current + 1);
+    } else {
+      setErrorMessage(null);
+      event.target.style.border = "1px solid #EBF1FF";
+      setErrorActive((current) => !current);
+    }
   };
 
-  // useEffect(() => {
-  //   setErrorMessage("Belə bir FİN kod mövcud deyil, bir daha sınayın.");
-  // });
+  useEffect(() => {
+    console.log("test");
+  }, []);
 
   return (
     <div>
@@ -79,7 +93,8 @@ function CreateAccountFin() {
                   FİN kod
                   <div>
                     <input
-                      onChange={handleChange}
+                      maxLength={7}
+                      onChange={handleFinChange}
                       type="text"
                       id="input"
                       required
@@ -90,11 +105,60 @@ function CreateAccountFin() {
                       className="info-btn"
                       onClick={handleClick}
                     >
-                      <img
-                        className="popup-icon"
+                      <div
+                        // className={
+                        //   toggleClass ? "popup-icon" : "popup-icon-err"
+                        // }
+                        className={
+                          errorActive ? "popup-icon" : "popup-icon-err"
+                        }
+                      >
+                        <svg
+                          className={
+                            errorActive ? "popup-icon" : "popup-icon-err"
+                          }
+                          // className={
+                          //   toggleClass ? "popup-icon" : "popup-icon-err"
+                          // }
+                          width="16"
+                          height="16"
+                          viewBox="0 0 16 16"
+                          fill="none"
+                          xmlns="http://www.w3.org/2000/svg"
+                        >
+                          <path
+                            d="M7.99967 1.33329C11.6663 1.33329 14.6663 4.33329 14.6663 7.99996C14.6663 11.6666 11.6663 14.6666 7.99967 14.6666C4.33301 14.6666 1.33301 11.6666 1.33301 7.99996C1.33301 4.33329 4.33301 1.33329 7.99967 1.33329Z"
+                            stroke="#4E4F51"
+                            strokeWidth="1.5"
+                            strokeLinecap="round"
+                            strokeLinejoin="round"
+                          />
+                          <path
+                            d="M8 10.6666L8 7.33329"
+                            stroke="#4E4F51"
+                            strokeWidth="1.5"
+                            strokeLinecap="round"
+                            strokeLinejoin="round"
+                          />
+                          <path
+                            d="M7.99609 5.33289L8.00208 5.33289"
+                            stroke="#4E4F51"
+                            strokeWidth="2"
+                            strokeLinecap="round"
+                            strokeLinejoin="round"
+                          />
+                        </svg>
+                      </div>
+                      {/* <img
+                        className={isActive ? "popup-icon" : "error-fin-popup"}
                         src="/images/general icons (2).svg"
                         alt=""
-                      />
+                      /> */}
+                      {/* <img
+                        className={isActive ? "error-fin-popup" : null}
+                        src="/images/error-info.svg"
+                        alt=""
+                      /> */}
                     </button>
                   </div>
                 </label>

@@ -66,8 +66,9 @@ function ResetPassword() {
               <label for="number">
                 Mobil nömrə <span>*</span>
               </label>
-              <div class="input">
+              <div class="reset-psw-input">
                 <input
+                  // class="reset-psw-input"
                   type="text"
                   name=""
                   id="number"

@@ -32,24 +32,24 @@ function CreatePassword() {
 
   return (
     <div>
-      <div class="main-container">
-        <div class="left">
+      <div className="main-container">
+        <div className="left">
           <img
-            class="background-img"
+            className="background-img"
             src="/images/leftside background.svg"
             alt=""
           />
-          <div class="logo">
+          <div className="logo">
             <img src="/images/ferrum logo 1.svg" alt="logo" />
           </div>
         </div>
-        <div class="right">
-          <div class="txt">
-            <div class="back-btn">
+        <div className="right">
+          <div className="txt">
+            <div className="back-btn">
               <Link to={"/CreateAccount"}>
                 <button>
                   <img
-                    class="back-icon"
+                    className="back-icon"
                     src="/images/general icons.svg"
                     alt=""
                   />
@@ -61,48 +61,48 @@ function CreatePassword() {
 
           <form
             onSubmit={handleSubmit}
-            class="form"
+            className="form"
             action=""
             name="newPassword"
           >
-            <div class="password">
-              <label for="psw">
+            <div className="password">
+              <label htmlFor="psw">
                 Yeni şifrə <span>*</span>
-                <div class="input">
+                <div className="input">
                   <input
                     type="password"
                     id="psw"
                     required
                     placeholder="Şifrə"
                   />
-                  <button class="show-psw-btn">
+                  <button className="show-psw-btn">
                     <img src="/images/general icons (3).svg" alt="" />
                   </button>
                 </div>
               </label>
             </div>
-            <div class="password">
-              <label for="psw-again">
+            <div className="password">
+              <label htmlFor="psw-again">
                 Şifrə təkrarı <span>*</span>
-                <div class="input">
+                <div className="input">
                   <input
                     type="password"
                     id="psw-again"
                     required
                     placeholder="Şifrə təkrarı"
                   />
-                  <button class="show-psw-btn">
+                  <button className="show-psw-btn">
                     <img src="/images/general icons (3).svg" alt="" />
                   </button>
                 </div>
               </label>
             </div>
-            <div class="submit">
-              <button type="submit" class="continue-btn">
+            <div className="submit">
+              <button type="submit" className="continue-btn">
                 Davam et
               </button>
             </div>
-            <div class="login">
+            <div className="login">
               <p>
                 Ferrum kabinetin var? <Link to={"/Login"}> Daxil ol</Link>
               </p>
