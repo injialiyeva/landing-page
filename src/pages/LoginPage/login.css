@@ -84,10 +84,6 @@ body {
   border: none;
 }
 
-.fin {
-  margin-bottom: 24px;
-}
-
 label {
   font-style: normal;
   font-weight: 400;
@@ -253,6 +249,10 @@ input {
 
 .forgot-psw :link {
   text-decoration: none;
+}
+
+.password {
+  margin-top: 24px;
 }
 
 .submit {

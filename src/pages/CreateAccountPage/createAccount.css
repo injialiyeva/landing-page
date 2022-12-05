@@ -1,3 +1,104 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  list-style: none;
+}
+
+body {
+  font-family: "Source Sans Pro", sans-serif;
+  height: 100%;
+  width: 100%;
+  margin: 0;
+}
+
+.main-container {
+  width: 1440px;
+  height: 100%;
+  background: #ffffff;
+  display: flex;
+}
+
+.left {
+  width: 710px;
+  height: 100%;
+}
+
+.background-img {
+  width: 710px;
+  height: 100%;
+}
+
+.background-img img {
+  height: 100%;
+}
+
+.right {
+  width: 100%;
+  height: 100%;
+}
+
+.right-con {
+  width: 381px;
+  height: 412px;
+  margin-top: 137px;
+  margin-left: 174px;
+}
+
+.logo {
+  position: absolute;
+  left: 56px;
+  top: 56px;
+}
+
+.create-acc-header {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 0px;
+  gap: 16px;
+  width: 291px;
+  height: 40px;
+  margin-bottom: 40px;
+}
+
+.create-acc-header h1 {
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 32px;
+  line-height: 40px;
+  color: #101923;
+}
+
+.name,
+.surname,
+.fin-code,
+.mob-num {
+  margin-bottom: 24px;
+}
+
+.mob-num {
+  margin-bottom: 40px;
+}
+
+.login {
+  width: 292px;
+  height: 24px;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 24px;
+  color: #4e4f51;
+}
+
+.login :link {
+  text-decoration: none;
+}
+
+.login p span {
+  color: #4a5fe5;
+}
+
 /* * {
   margin: 0;
   padding: 0;

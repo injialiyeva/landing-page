@@ -1,6 +1,8 @@
 import React, { useState } from "react";
 import "./createAccountFin.css";
 import { Link } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
+import { useEffect } from "react";
 
 function CreateAccountFin() {
   const [isActive, setIsActive] = useState(false);
@@ -15,37 +17,49 @@ function CreateAccountFin() {
     setIsActive((current) => !current);
   };
 
-  const [passwordShown, setPasswordShown] = useState(false);
+  // const [passwordShown, setPasswordShown] = useState(false);
 
-  const togglePassword = () => {
-    setPasswordShown(!passwordShown);
+  // const togglePassword = () => {
+  //   setPasswordShown(!passwordShown);
+  // };
+
+  const navigate = useNavigate();
+
+  const handleSubmit = (event) => {
+    event.preventDefault();
+
+    navigate("/CreateAccount");
   };
 
-  // const givenFin = "1AG3SD8";
-  // const fin = document.getElementById("given-fin").value;
+  const [errorMessage, setErrorMessage] = useState("");
 
-  // if ((givenFin = !fin)) {
-  // }
+  const handleChange = () => {
+    setErrorMessage("Belə bir FİN kod mövcud deyil, bir daha sınayın.");
+  };
+
+  // useEffect(() => {
+  //   setErrorMessage("Belə bir FİN kod mövcud deyil, bir daha sınayın.");
+  // });
 
   return (
     <div>
-      <div class="main-container">
-        <div class="left">
+      <div className="main-container">
+        <div className="left">
           <div className="background-img">
             <img src="/images/leftside background.svg" alt="" />
           </div>
-          <div class="logo">
+          <div className="logo">
             <img src="/images/ferrum logo 1.svg" alt="logo" />
           </div>
         </div>
-        <div class="right">
+        <div className="right">
           <div className="right-con">
-            <div class="create-acc-txt">
-              <div class="back-btn">
+            <div className="create-acc-txt">
+              <div className="back-btn">
                 <Link to={"/Login"}>
                   <button type="button">
                     <img
-                      class="back-icon"
+                      className="back-icon"
                       src="/images/general icons.svg"
                       alt=""
                     />
@@ -54,14 +68,20 @@ function CreateAccountFin() {
               </div>
               <h1>Hesab yaradın</h1>
             </div>
-            <form class="form" action="" name="loginForm">
-              <div class="fin">
-                <label for="username">
+            <form
+              onSubmit={handleSubmit}
+              className="form"
+              action=""
+              name="loginForm"
+            >
+              <div className="fin">
+                <label htmlFor="username">
                   FİN kod
                   <div>
                     <input
+                      onChange={handleChange}
                       type="text"
-                      id="given-fin"
+                      id="input"
                       required
                       placeholder="1AG3SD8"
                     />
@@ -78,6 +98,7 @@ function CreateAccountFin() {
                     </button>
                   </div>
                 </label>
+
                 {/* <p className="error">
                   Belə bir FİN kod mövcud deyil, bir daha sınayın.
                 </p> */}
@@ -108,14 +129,16 @@ function CreateAccountFin() {
                 </div>
               </div>
 
-              <div class="submit">
-                <Link to={"/CreateAccount"}>
-                  <button type="submit" class="continue-btn">
-                    Davam et
-                  </button>
-                </Link>
+              <div className="errorMessage">
+                {errorMessage && <p className="error"> {errorMessage} </p>}
               </div>
-              <div class="login">
+
+              <div className="submit">
+                <button type="submit" className="continue-btn">
+                  Davam et
+                </button>
+              </div>
+              <div className="login">
                 <p>
                   Ferrum kabinetin var?
                   <Link to={"/Login"}>

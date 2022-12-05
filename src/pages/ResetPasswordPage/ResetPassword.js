@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import "./resetPassword.css";
 import { Link } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 
 function ResetPassword() {
   // const [isActive, setIsActive] = useState(false);
@@ -20,6 +21,14 @@ function ResetPassword() {
   // const togglePassword = () => {
   //   setPasswordShown(!passwordShown);
   // };
+
+  const navigate = useNavigate();
+
+  const handleSubmit = (event) => {
+    event.preventDefault();
+
+    navigate("/PasswordChange");
+  };
 
   return (
     <div>
@@ -53,33 +62,33 @@ function ResetPassword() {
               biləcəksiniz.
             </p>
 
-            <label for="number">
-              Mobil nömrə <span>*</span>
-            </label>
-            <div class="input">
-              <input
-                type="text"
-                name=""
-                id="number"
-                required
-                placeholder="+994 (50) 123 45 67"
-              />
-              {/* <button type="button" className="info-btn" onClick={handleClick}>
+            <form onSubmit={handleSubmit} class="form" action="">
+              <label for="number">
+                Mobil nömrə <span>*</span>
+              </label>
+              <div class="input">
+                <input
+                  type="text"
+                  name=""
+                  id="number"
+                  required
+                  placeholder="+994 (50) 123 45 67"
+                />
+                {/* <button type="button" className="info-btn" onClick={handleClick}>
                 <img
                   className="popup-icon"
                   src="/images/general icons (2).svg"
                   alt=""
                 />
               </button> */}
-            </div>
+              </div>
 
-            <div class="submit">
-              <Link to={"/PasswordChange"}>
+              <div class="submit">
                 <button type="submit" class="continue-btn">
                   Davam et
                 </button>
-              </Link>
-            </div>
+              </div>
+            </form>
           </div>
         </div>
       </div>

@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import "./createPassword.css";
 import { Link } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 
 function CreatePassword() {
   const [isActive, setIsActive] = useState(false);
@@ -19,6 +20,14 @@ function CreatePassword() {
 
   const togglePassword = () => {
     setPasswordShown(!passwordShown);
+  };
+
+  const navigate = useNavigate();
+
+  const handleSubmit = (event) => {
+    event.preventDefault();
+
+    navigate("/Login");
   };
 
   return (
@@ -50,7 +59,12 @@ function CreatePassword() {
             <h1>Şifrə təyin edin</h1>
           </div>
 
-          <form class="form" action="" name="newPassword">
+          <form
+            onSubmit={handleSubmit}
+            class="form"
+            action=""
+            name="newPassword"
+          >
             <div class="password">
               <label for="psw">
                 Yeni şifrə <span>*</span>
@@ -84,11 +98,9 @@ function CreatePassword() {
               </label>
             </div>
             <div class="submit">
-              <Link to={"Login"}>
-                <button type="submit" class="continue-btn">
-                  Davam et
-                </button>
-              </Link>
+              <button type="submit" class="continue-btn">
+                Davam et
+              </button>
             </div>
             <div class="login">
               <p>

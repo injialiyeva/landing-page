@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import "./login.css";
 import { Link } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 
 function Login() {
   const [isActive, setIsActive] = useState(false);
@@ -19,6 +20,14 @@ function Login() {
 
   const togglePassword = () => {
     setPasswordShown(!passwordShown);
+  };
+
+  const navigate = useNavigate();
+
+  const handleSubmit = (event) => {
+    event.preventDefault();
+
+    navigate("/Account");
   };
 
   return (
@@ -48,7 +57,12 @@ function Login() {
               </div>
               <h1>Daxil ol</h1>
             </div>
-            <form className="form" action="" name="loginForm">
+            <form
+              onSubmit={handleSubmit}
+              className="form"
+              action=""
+              name="loginForm"
+            >
               <div className="fin">
                 <label htmlFor="username">
                   FİN kod <span>*</span>
@@ -125,11 +139,9 @@ function Login() {
               </div>
 
               <div className="submit">
-                <Link to={"/Account"}>
-                  <button type="submit" className="login-btn">
-                    Daxil ol
-                  </button>
-                </Link>
+                <button type="submit" className="login-btn">
+                  Daxil ol
+                </button>
               </div>
               <div className="register">
                 <p>
