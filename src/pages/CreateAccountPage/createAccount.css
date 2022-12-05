@@ -39,7 +39,7 @@ body {
   height: 100%;
 }
 
-.right-con {
+.right-con-create-acc {
   width: 381px;
   height: 412px;
   margin-top: 137px;
@@ -52,7 +52,7 @@ body {
   top: 56px;
 }
 
-.create-acc-header {
+.header-create-acc {
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -63,7 +63,7 @@ body {
   margin-bottom: 40px;
 }
 
-.create-acc-header h1 {
+.header-create-acc h1 {
   font-family: "Poppins";
   font-style: normal;
   font-weight: 700;
@@ -72,18 +72,111 @@ body {
   color: #101923;
 }
 
-.name,
-.surname,
-.fin-code,
-.mob-num {
+.back-btn-create-acc {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 8px;
+  gap: 10px;
+  width: 32px;
+  height: 32px;
+  background: #ebf1ff;
+  border-radius: 1000px;
+}
+
+.back-btn-create-acc button {
+  border: none;
+  padding-top: 3px;
+}
+
+.name-create-acc,
+.surname-create-acc,
+.fin-code-create-acc {
   margin-bottom: 24px;
 }
 
-.mob-num {
+.mob-num-create-acc {
   margin-bottom: 40px;
 }
 
-.crt-acc-input {
+.info-btn-create-acc {
+  margin-left: -28px;
+  margin-top: 19px;
+  border: none;
+  width: 16px;
+  height: 16px;
+  background-color: #fafbff;
+}
+
+.hidden {
+  display: none;
+}
+
+.fin-popup-create-acc {
+  width: 192px;
+  height: 269px;
+  background: #4e4f51;
+  border-radius: 10px;
+  margin-top: 12px;
+  margin-left: 189px;
+  padding: 16px;
+  display: block;
+  position: absolute;
+}
+
+.fin-popup-icon-create-acc {
+  width: 16px;
+  height: 16px;
+}
+
+.fin-popup-header-create-acc {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 0px;
+  gap: 10px;
+  width: 160px;
+  height: 24px;
+  margin-bottom: 10px;
+}
+
+.fin-popup-txt-create-acc {
+  width: 160px;
+  height: 80px;
+}
+
+.fin-popup-txt-create-acc p {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 16px;
+  color: #fafbff;
+  flex: none;
+  order: 1;
+  align-self: stretch;
+  flex-grow: 0;
+}
+
+.fin-nedir-create-acc {
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 24px;
+  color: #ffffff;
+}
+
+.popup-cancel-create-acc {
+  border: none;
+  background-color: #4e4f51;
+  position: absolute;
+  bottom: 230px;
+  right: 15px;
+  cursor: pointer;
+}
+
+.input-create-acc {
   width: 381px;
   height: 48px;
   background: #fafbff;
@@ -97,6 +190,53 @@ body {
   font-weight: 274;
   font-size: 16px;
   line-height: 24px;
+}
+
+.submit-create-acc {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 12px 24px;
+  margin-bottom: 16px;
+  gap: 8px;
+  width: 381px;
+  height: 48px;
+  background: #2e43c9;
+  border-radius: 1000px;
+  flex: none;
+  order: 0;
+  flex-grow: 0;
+}
+
+.submit-create-acc button {
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 24px;
+  letter-spacing: 0.02em;
+  color: #ffffff;
+  background: #2e43c9;
+  border: none;
+}
+
+.login-create-acc {
+  width: 197px;
+  height: 24px;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 24px;
+  color: #4e4f51;
+}
+
+.login-create-acc :link {
+  text-decoration: none;
+}
+
+.login-create-acc p span {
+  color: #4a5fe5;
 }
 
 .otp {
@@ -279,7 +419,7 @@ input::-webkit-inner-spin-button {
     display: flex;
   }
   
-  .back-btn{
+  .back-btn-create-acc{
     width: 32px;
       height: 32px;
       background: #ebf1ff;
@@ -291,17 +431,17 @@ input::-webkit-inner-spin-button {
       margin-top: 4px;
   }
   
-  .back-btn button{
+  .back-btn-create-acc button{
     border: none;
   }
   
-  .name{
+  .name-create-acc{
     width: 381px;
       height: 76px;
       margin-bottom: 24px;
   }
   
-  .continue-btn {
+  .continue-btn-create-acc {
     width: 381px;
     height: 48px;
     margin-top: 40px;
@@ -317,13 +457,13 @@ input::-webkit-inner-spin-button {
     color: #ffffff;
   }
   
-  .login {
+  .login-create-acc {
     width: 381px;
     height: 24px;
     margin-top: 16px;
   }
   
-  .login p {
+  .login-create-acc p {
     font-style: normal;
     font-weight: 400;
     font-size: 14px;
@@ -331,7 +471,4 @@ input::-webkit-inner-spin-button {
     color: #4e4f51;
   }
   
-  .login p a {
-    text-decoration: none;
-    color: #4a5fe5;
-  } */
+   */

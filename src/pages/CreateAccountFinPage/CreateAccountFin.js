@@ -67,13 +67,13 @@ function CreateAccountFin() {
           </div>
         </div>
         <div className="right">
-          <div className="right-con">
-            <div className="create-acc-txt">
-              <div className="back-btn">
+          <div className="right-con-create-acc-fin">
+            <div className="txt-create-acc-fin">
+              <div className="back-btn-create-acc-fin">
                 <Link to={"/Login"}>
                   <button type="button">
                     <img
-                      className="back-icon"
+                      className="back-icon-create-acc-fin"
                       src="/images/general icons.svg"
                       alt=""
                     />
@@ -84,25 +84,25 @@ function CreateAccountFin() {
             </div>
             <form
               onSubmit={handleSubmit}
-              className="form"
+              className="form-create-acc-fin"
               action=""
               name="loginForm"
             >
-              <div className="fin">
-                <label htmlFor="username">
+              <div className="fin-create-acc-fin">
+                <label htmlFor="username-create-acc-fin">
                   FİN kod
                   <div>
                     <input
                       maxLength={7}
                       onChange={handleFinChange}
                       type="text"
-                      id="input"
+                      id="input-create-acc-fin"
                       required
                       placeholder="1AG3SD8"
                     />
                     <button
                       type="button"
-                      className="info-btn"
+                      className="info-btn-create-acc-fin"
                       onClick={handleClick}
                     >
                       <div
@@ -110,12 +110,16 @@ function CreateAccountFin() {
                         //   toggleClass ? "popup-icon" : "popup-icon-err"
                         // }
                         className={
-                          errorActive ? "popup-icon" : "popup-icon-err"
+                          errorActive
+                            ? "popup-icon-create-acc-fin"
+                            : "popup-icon-err-create-acc-fin"
                         }
                       >
                         <svg
                           className={
-                            errorActive ? "popup-icon" : "popup-icon-err"
+                            errorActive
+                              ? "popup-icon-create-acc-fin"
+                              : "popup-icon-err-create-acc-fin"
                           }
                           // className={
                           //   toggleClass ? "popup-icon" : "popup-icon-err"
@@ -166,22 +170,32 @@ function CreateAccountFin() {
                 {/* <p className="error">
                   Belə bir FİN kod mövcud deyil, bir daha sınayın.
                 </p> */}
-                <div className={isActive ? "fin-popup" : "hidden"}>
-                  <div className="fin-popup-header">
+                <div
+                  className={
+                    isActive
+                      ? "fin-popup-create-acc-fin"
+                      : "hidden-create-acc-fin"
+                  }
+                >
+                  <div className="fin-popup-header-create-acc-fin">
                     <img
-                      className="fin-popup-icon"
+                      className="fin-popup-icon-create-acc-fin"
                       src="/images/general icons(4).svg"
                     />
-                    <p className="fin-nedir">FİN nədir?</p>
+                    <p className="fin-nedir-create-acc-fin">FİN nədir?</p>
                     <button
                       type="button"
-                      className={isActive ? "popup-cancel" : "hidden"}
+                      className={
+                        isActive
+                          ? "popup-cancel-create-acc-fin"
+                          : "hidden-create-acc-fin"
+                      }
                       onClick={cancelClick}
                     >
                       <img src="/images/general icons(5).svg" />
                     </button>
                   </div>
-                  <div className="fin-popup-txt">
+                  <div className="fin-popup-txt-create-acc-fin">
                     <p>
                       FİN kod 7 simvoldan ibarətdir və axırıncı sətirdə
                       göstərilən son səkkiz simvolun ilk yeddisi təşkil edir.
@@ -193,16 +207,18 @@ function CreateAccountFin() {
                 </div>
               </div>
 
-              <div className="errorMessage">
-                {errorMessage && <p className="error"> {errorMessage} </p>}
+              <div className="error-message-create-acc-fin">
+                {errorMessage && (
+                  <p className="error-create-acc-fin"> {errorMessage} </p>
+                )}
               </div>
 
-              <div className="submit">
-                <button type="submit" className="continue-btn">
+              <div className="submit-create-acc-fin">
+                <button type="submit" className="continue-btn-create-acc-fin">
                   Davam et
                 </button>
               </div>
-              <div className="login">
+              <div className="login-create-acc-fin">
                 <p>
                   Ferrum kabinetin var?
                   <Link to={"/Login"}>

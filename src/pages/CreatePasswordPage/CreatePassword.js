@@ -4,17 +4,17 @@ import { Link } from "react-router-dom";
 import { useNavigate } from "react-router-dom";
 
 function CreatePassword() {
-  const [isActive, setIsActive] = useState(false);
+  // const [isActive, setIsActive] = useState(false);
 
-  const handleClick = (event) => {
-    if (!isActive) {
-      setIsActive((current) => !current);
-    }
-  };
+  // const handleClick = (event) => {
+  //   if (!isActive) {
+  //     setIsActive((current) => !current);
+  //   }
+  // };
 
-  const cancelClick = (event) => {
-    setIsActive((current) => !current);
-  };
+  // const cancelClick = (event) => {
+  //   setIsActive((current) => !current);
+  // };
 
   const [passwordShown, setPasswordShown] = useState(false);
 
@@ -44,70 +44,80 @@ function CreatePassword() {
           </div>
         </div>
         <div className="right">
-          <div className="txt">
-            <div className="back-btn">
-              <Link to={"/CreateAccount"}>
-                <button>
-                  <img
-                    className="back-icon"
-                    src="/images/general icons.svg"
-                    alt=""
-                  />
-                </button>
-              </Link>
+          <div className="right-con-create-psw">
+            <div className="txt-create-psw">
+              <div className="back-btn-create-psw">
+                <Link to={"/CreateAccount"}>
+                  <button>
+                    <img
+                      className="back-icon-create-psw"
+                      src="/images/general icons.svg"
+                      alt=""
+                    />
+                  </button>
+                </Link>
+              </div>
+              <h1>Şifrə təyin edin</h1>
             </div>
-            <h1>Şifrə təyin edin</h1>
-          </div>
 
-          <form
-            onSubmit={handleSubmit}
-            className="form"
-            action=""
-            name="newPassword"
-          >
-            <div className="password">
-              <label htmlFor="psw">
-                Yeni şifrə <span>*</span>
-                <div className="input">
-                  <input
-                    type="password"
-                    id="psw"
-                    required
-                    placeholder="Şifrə"
-                  />
-                  <button className="show-psw-btn">
-                    <img src="/images/general icons (3).svg" alt="" />
-                  </button>
-                </div>
-              </label>
-            </div>
-            <div className="password">
-              <label htmlFor="psw-again">
-                Şifrə təkrarı <span>*</span>
-                <div className="input">
-                  <input
-                    type="password"
-                    id="psw-again"
-                    required
-                    placeholder="Şifrə təkrarı"
-                  />
-                  <button className="show-psw-btn">
-                    <img src="/images/general icons (3).svg" alt="" />
-                  </button>
-                </div>
-              </label>
-            </div>
-            <div className="submit">
-              <button type="submit" className="continue-btn">
-                Davam et
-              </button>
-            </div>
-            <div className="login">
-              <p>
-                Ferrum kabinetin var? <Link to={"/Login"}> Daxil ol</Link>
-              </p>
-            </div>
-          </form>
+            <form
+              onSubmit={handleSubmit}
+              className="form-create-psw"
+              action=""
+              name="newPassword"
+            >
+              <div className="password-create-psw">
+                <label htmlFor="psw-create-psw">
+                  Şifrə <span>*</span>
+                  <div className="input-create-psw">
+                    <input
+                      type={passwordShown ? "text" : "password"}
+                      id="psw-create-psw"
+                      required
+                      placeholder="Şifrə"
+                    />
+                    <button
+                      type="button"
+                      className="show-psw-btn-create-psw"
+                      onClick={togglePassword}
+                    >
+                      <img src="/images/general icons (3).svg" alt="" />
+                    </button>
+                  </div>
+                </label>
+              </div>
+              <div className="password-create-psw">
+                <label htmlFor="psw-again-create-psw">
+                  Şifrə təkrarı <span>*</span>
+                  <div className="input-create-psw">
+                    <input
+                      type={passwordShown ? "text" : "password"}
+                      id="psw-again-create-psw"
+                      required
+                      placeholder="Şifrə təkrarı"
+                    />
+                    <button
+                      type="button"
+                      className="show-psw-btn-create-psw"
+                      onClick={togglePassword}
+                    >
+                      <img src="/images/general icons (3).svg" alt="" />
+                    </button>
+                  </div>
+                </label>
+              </div>
+              <div className="submit-create-psw">
+                <button type="submit" className="continue-btn-create-psw">
+                  Davam et
+                </button>
+              </div>
+              <div className="login-create-psw">
+                <p>
+                  Ferrum kabinetin var? <Link to={"/Login"}> Daxil ol</Link>
+                </p>
+              </div>
+            </form>
+          </div>
         </div>
       </div>
     </div>

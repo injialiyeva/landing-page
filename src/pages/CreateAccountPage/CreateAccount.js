@@ -16,11 +16,11 @@ function CreateAccount() {
     setIsActive((current) => !current);
   };
 
-  const [passwordShown, setPasswordShown] = useState(false);
+  // const [passwordShown, setPasswordShown] = useState(false);
 
-  const togglePassword = () => {
-    setPasswordShown(!passwordShown);
-  };
+  // const togglePassword = () => {
+  //   setPasswordShown(!passwordShown);
+  // };
 
   const navigate = useNavigate();
 
@@ -45,7 +45,7 @@ function CreateAccount() {
 
   return (
     <div>
-      <div className="main-container otp-background">
+      <div className="main-container">
         <div className="left">
           <img
             className="background-img"
@@ -57,133 +57,139 @@ function CreateAccount() {
           </div>
         </div>
         <div className="right">
-          <div className="right-con">
-            <div className="create-acc">
-              <div className="create-acc-header">
-                <div className="back-btn">
+          <div className="right-con-create-acc">
+            <div className="header-create-acc">
+              <div className="back-btn-create-acc">
+                <Link to={"/Login"}>
                   <button>
                     <img
-                      className="back-icon"
+                      className="back-icon-create-acc"
                       src="/images/general icons.svg"
                       alt=""
                     />
                   </button>
-                </div>
-                <h1>Hesab yaradın</h1>
+                </Link>
               </div>
-              <form onSubmit={handleSubmit} className="registerForm" action="">
-                <div className="name">
-                  <label htmlFor="name">
-                    Ad <span>*</span>
-                    <div>
-                      <input
-                        className="crt-acc-input"
-                        type="text"
-                        id="name"
-                        required
-                        placeholder="Ad"
-                      />
-                    </div>
-                  </label>
-                </div>
-                <div className="surname">
-                  <label htmlFor="surname">
-                    Soyad <span>*</span>
-                    <div>
-                      <input
-                        className="crt-acc-input"
-                        type="text"
-                        id="surname"
-                        required
-                        placeholder="Soyad"
-                      />
-                    </div>
-                  </label>
-                </div>
-                <div className="fin-code">
-                  <label htmlFor="fin-code">
-                    FİN kod <span>*</span>
-                    <div>
-                      <input
-                        className="crt-acc-input"
-                        type="text"
-                        id="fin-code"
-                        required
-                        placeholder="A417290NMA"
-                      />
-                      <button
-                        type="button"
-                        className="info-btn"
-                        onClick={handleClick}
-                      >
-                        <img
-                          className="popup-icon"
-                          src="/images/general icons (2).svg"
-                          alt=""
-                        />
-                      </button>
-                    </div>
-                  </label>
-                  <div className={isActive ? "fin-popup" : "hidden"}>
-                    <div className="fin-popup-header">
+              <h1>Hesab yaradın</h1>
+            </div>
+            <form
+              onSubmit={handleSubmit}
+              className="registerFormCreateAcc"
+              action=""
+            >
+              <div className="name-create-acc">
+                <label htmlFor="name-create-acc">
+                  Ad <span>*</span>
+                  <div>
+                    <input
+                      className="input-create-acc"
+                      type="text"
+                      id="name-create-acc"
+                      required
+                      placeholder="Ad"
+                    />
+                  </div>
+                </label>
+              </div>
+              <div className="surname-create-acc">
+                <label htmlFor="surname-create-acc">
+                  Soyad <span>*</span>
+                  <div>
+                    <input
+                      className="input-create-acc"
+                      type="text"
+                      id="surname-create-acc"
+                      required
+                      placeholder="Soyad"
+                    />
+                  </div>
+                </label>
+              </div>
+              <div className="fin-code-create-acc">
+                <label htmlFor="fin-code-create-acc">
+                  FİN kod <span>*</span>
+                  <div>
+                    <input
+                      className="input-create-acc"
+                      type="text"
+                      id="fin-code-create-acc"
+                      required
+                      placeholder="A417290NMA"
+                    />
+                    <button
+                      type="button"
+                      className="info-btn-create-acc"
+                      onClick={handleClick}
+                    >
                       <img
-                        className="fin-popup-icon"
-                        src="/images/general icons(4).svg"
+                        className="popup-icon-create-acc"
+                        src="/images/general icons (2).svg"
+                        alt=""
                       />
-                      <p className="fin-nedir">FİN nədir?</p>
-                      <button
-                        type="button"
-                        className={isActive ? "popup-cancel" : "hidden"}
-                        onClick={cancelClick}
-                      >
-                        <img src="/images/general icons(5).svg" />
-                      </button>
-                    </div>
-                    <div className="fin-popup-txt">
-                      <p>
-                        FİN kod 7 simvoldan ibarətdir və axırıncı sətirdə
-                        göstərilən son səkkiz simvolun ilk yeddisi təşkil edir.
-                      </p>
-                    </div>
-                    <div>
-                      <img src="/images/vəsiqə foto.svg" />
-                    </div>
+                    </button>
+                  </div>
+                </label>
+                <div className={isActive ? "fin-popup-create-acc" : "hidden"}>
+                  <div className="fin-popup-header-create-acc">
+                    <img
+                      className="fin-popup-icon-create-acc"
+                      src="/images/general icons(4).svg"
+                    />
+                    <p className="fin-nedir-create-acc">FİN nədir?</p>
+                    <button
+                      type="button"
+                      className={
+                        isActive ? "popup-cancel-create-acc" : "hidden"
+                      }
+                      onClick={cancelClick}
+                    >
+                      <img src="/images/general icons(5).svg" />
+                    </button>
+                  </div>
+                  <div className="fin-popup-txt-create-acc">
+                    <p>
+                      FİN kod 7 simvoldan ibarətdir və axırıncı sətirdə
+                      göstərilən son səkkiz simvolun ilk yeddisi təşkil edir.
+                    </p>
+                  </div>
+                  <div>
+                    <img src="/images/vəsiqə foto.svg" />
                   </div>
                 </div>
-                <div className="mob-num">
-                  <label htmlFor="mob-num">
-                    Mobil nömrə <span>*</span>
-                    <div>
-                      <input
-                        className="crt-acc-input"
-                        type="number"
-                        id="mob-num"
-                        required
-                        placeholder="+994 (50) 123 45 67"
-                      />
-                    </div>
-                  </label>
-                </div>
-                <div className="submit">
-                  <button
-                    type="submit"
-                    className="continue-btn"
-                    onClick={handleClickOpen}
-                  >
-                    Davam et
-                  </button>
-                </div>
+              </div>
+              <div className="mob-num-create-acc">
+                <label htmlFor="mob-num-create-acc">
+                  Mobil nömrə <span>*</span>
+                  <div>
+                    <input
+                      className="input-create-acc"
+                      type="number"
+                      id="mob-num-create-acc"
+                      required
+                      placeholder="+994 (50) 123 45 67"
+                    />
+                  </div>
+                </label>
+              </div>
+              <div className="submit-create-acc">
+                <button
+                  type="submit"
+                  className="continue-btn-create-acc"
+                  onClick={handleClickOpen}
+                >
+                  Davam et
+                </button>
+              </div>
 
-                <div className="login">
-                  <p>
-                    Ferrum kabinetin var?
-                    <Link to={"/Login"}>
-                      <span> Daxil ol</span>
-                    </Link>
-                  </p>
-                </div>
-              </form>
-            </div>
+              <div className="login-create-acc">
+                <p>
+                  Ferrum kabinetin var?
+                  <Link to={"/Login"}>
+                    <span> Daxil ol</span>
+                  </Link>
+                </p>
+              </div>
+            </form>
           </div>
         </div>
 

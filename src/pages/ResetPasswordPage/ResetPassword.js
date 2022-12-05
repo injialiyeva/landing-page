@@ -32,23 +32,23 @@ function ResetPassword() {
 
   return (
     <div>
-      <div class="main-container">
-        <div class="left">
+      <div className="main-container">
+        <div className="left">
           <div className="background-img">
             <img src="/images/leftside background.svg" alt="" />
           </div>
-          <div class="logo">
+          <div className="logo">
             <img src="/images/ferrum logo 1.svg" alt="logo" />
           </div>
         </div>
-        <div className="right-con">
-          <div class="right">
-            <div class="txt">
-              <div class="back-btn">
+        <div className="right">
+          <div className="right-con-reset-psw">
+            <div className="txt-reset-psw">
+              <div className="back-btn-reset-psw">
                 <Link to={"/Login"}>
                   <button type="button">
                     <img
-                      class="back-icon"
+                      className="back-icon-reset-psw"
                       src="/images/general icons.svg"
                       alt=""
                     />
@@ -57,35 +57,35 @@ function ResetPassword() {
               </div>
               <h1>Şifrəni yenilə</h1>
             </div>
-            <p className="num-info">
+            <p className="num-info-reset-psw">
               Nömrənizə göndərilən link vasitəsilə şifrənizi yeniləyə
               biləcəksiniz.
             </p>
 
-            <form onSubmit={handleSubmit} class="form" action="">
-              <label for="number">
+            <form onSubmit={handleSubmit} className="form-reset-psw" action="">
+              <label htmlFor="number-reset-psw">
                 Mobil nömrə <span>*</span>
               </label>
-              <div class="reset-psw-input">
+              <div className="input-reset-psw">
                 <input
-                  // class="reset-psw-input"
-                  type="text"
+                  // className="input-reset-psw"
+                  type="number"
                   name=""
-                  id="number"
+                  id="number-reset-psw"
                   required
                   placeholder="+994 (50) 123 45 67"
                 />
-                {/* <button type="button" className="info-btn" onClick={handleClick}>
+                {/* <button type="button" className="info-btn-reset-psw" onClick={handleClick}>
                 <img
-                  className="popup-icon"
+                  className="popup-icon-reset-psw"
                   src="/images/general icons (2).svg"
                   alt=""
                 />
               </button> */}
               </div>
 
-              <div class="submit">
-                <button type="submit" class="continue-btn">
+              <div className="submit-reset-psw">
+                <button type="submit" className="continue-btn-reset-psw">
                   Davam et
                 </button>
               </div>

@@ -38,7 +38,7 @@ body {
   height: 100%;
 }
 
-.right-con {
+.right-con-create-acc-fin {
   width: 381px;
   height: 412px;
   margin-top: 287px;
@@ -51,13 +51,13 @@ body {
   top: 56px;
 }
 
-.create-acc-txt {
+.txt-create-acc-fin {
   width: 291px;
   height: 40px;
   display: flex;
 }
 
-.back-btn {
+.back-btn-create-acc-fin {
   width: 32px;
   height: 32px;
   background: #ebf1ff;
@@ -65,20 +65,19 @@ body {
   border-radius: 1000px;
   padding-top: 8px;
   padding-left: 8px;
-  margin-right: 16px;
   margin-top: 4px;
 }
 
-.back-btn button {
+.back-btn-create-acc-fin button {
   border: none;
 }
 
-.back-icon {
+.back-icon-create-acc-fin {
   width: 16px;
   height: 16px;
 }
 
-.create-acc-txt h1 {
+.txt-create-acc-fin h1 {
   font-family: "Poppins";
   font-style: normal;
   font-weight: 700;
@@ -100,7 +99,7 @@ label div {
   display: flex;
 }
 
-#input {
+#input-create-acc-fin {
   width: 381px;
   height: 48px;
   background: #fafbff;
@@ -117,7 +116,7 @@ label div {
   border: 1px solid red;
 }
 
-.errorMessage {
+.error-message-create-acc-fin {
   width: 267px;
   height: 16px;
   font-style: normal;
@@ -132,32 +131,102 @@ label div {
   color: #b8b9b9;
 }
 
-.fin {
+.fin-create-acc-fin {
   width: 381px;
   height: 76px;
   margin-top: 40px;
 }
 
-.info-btn {
+.info-btn-create-acc-fin {
   position: relative;
-  top: 18px;
+  top: 15px;
+  left: -28px;
   border: none;
   width: 16px;
   height: 16px;
   background-color: #fafbff;
 }
 
-.popup-icon path {
+.fin-popup-create-acc-fin {
+  width: 192px;
+  height: 269px;
+  background: #4e4f51;
+  border-radius: 10px;
+  margin-top: 12px;
+  margin-left: 189px;
+  padding: 16px;
+  display: block;
+  position: absolute;
+}
+
+.fin-popup-icon-create-acc-fin {
+  width: 16px;
+  height: 16px;
+}
+
+.fin-popup-header-create-acc-fin {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 0px;
+  gap: 10px;
+  width: 160px;
+  height: 24px;
+  margin-bottom: 10px;
+}
+
+.fin-popup-txt-create-acc-fin {
+  width: 160px;
+  height: 80px;
+}
+
+.fin-popup-txt-create-acc-fin p {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 16px;
+  color: #fafbff;
+  flex: none;
+  order: 1;
+  align-self: stretch;
+  flex-grow: 0;
+}
+
+.hidden-create-acc-fin {
+  display: none;
+}
+
+.popup-cancel-create-acc-fin {
+  border: none;
+  background-color: #4e4f51;
+  position: absolute;
+  bottom: 230px;
+  right: 28px;
+  cursor: pointer;
+}
+
+.fin-nedir-create-acc-fin {
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 24px;
+  color: #ffffff;
+  width: 90px;
+  height: 24px;
+}
+
+.popup-icon-create-acc-fin path {
   stroke: red;
 }
 
-.error-fin-popup {
+/* .error-fin-popup {
   position: absolute;
   top: 0px;
   left: 0px;
-}
+} */
 
-.submit {
+.submit-create-acc-fin {
   display: flex;
   flex-direction: row;
   justify-content: center;
@@ -172,7 +241,7 @@ label div {
   margin-top: 40px;
 }
 
-.submit button {
+.submit-create-acc-fin button {
   border: none;
   font-family: "Poppins";
   font-style: normal;
@@ -184,13 +253,13 @@ label div {
   color: #ffffff;
 }
 
-.login {
+.login-create-acc-fin {
   width: 381px;
   height: 24px;
   margin-top: 16px;
 }
 
-.login p {
+.login-create-acc-fin p {
   font-style: normal;
   font-weight: 400;
   font-size: 14px;
@@ -198,11 +267,11 @@ label div {
   color: #4e4f51;
 }
 
-.login p span {
+.login-create-acc-fin p span {
   text-decoration: none;
   color: #4a5fe5;
 }
 
-.login p :link {
+.login-create-acc-fin p :link {
   text-decoration: none;
 }

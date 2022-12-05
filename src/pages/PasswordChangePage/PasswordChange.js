@@ -32,23 +32,23 @@ function PasswordChange() {
 
   return (
     <div>
-      <div class="main-container">
-        <div class="left">
+      <div className="main-container">
+        <div className="left">
           <div className="background-img">
             <img src="/images/leftside background.svg" alt="" />
           </div>
-          <div class="logo">
+          <div className="logo">
             <img src="/images/ferrum logo 1.svg" alt="logo" />
           </div>
         </div>
         <div className="right">
-          <div class="right-con">
-            <div class="txt-psw">
-              <div class="back-btn">
+          <div className="right-con-psw-change">
+            <div className="txt-psw-psw-change">
+              <div className="back-btn-psw-change">
                 <Link to={"/ResetPassword"}>
                   <button>
                     <img
-                      class="back-icon"
+                      className="back-icon-psw-change"
                       src="/images/general icons.svg"
                       alt=""
                     />
@@ -60,23 +60,23 @@ function PasswordChange() {
 
             <form
               onSubmit={handleSubmit}
-              class="form"
+              className="form-psw-change"
               action=""
               name="newPassword"
             >
-              <div class="password">
-                <label for="psw">
+              <div className="password-psw-change">
+                <label htmlFor="psw-change">
                   Yeni şifrə <span>*</span>
-                  <div className="psw-change-input">
+                  <div className="input-psw-change">
                     <input
                       type={passwordShown ? "text" : "password"}
-                      id="psw"
+                      id="psw-change"
                       required
                       placeholder="Şifrə"
                     />
                     <button
                       type="button"
-                      class="show-psw-btn"
+                      className="show-psw-btn-psw-change"
                       onClick={togglePassword}
                     >
                       <img src="/images/general icons (3).svg" alt="" />
@@ -84,19 +84,19 @@ function PasswordChange() {
                   </div>
                 </label>
               </div>
-              <div class="password">
-                <label for="psw-again">
+              <div className="password-psw-change">
+                <label htmlFor="psw-again-psw-change">
                   Şifrə təkrarı <span>*</span>
-                  <div className="psw-change-input">
+                  <div className="input-psw-change">
                     <input
                       type={passwordShown ? "text" : "password"}
-                      id="psw-again"
+                      id="psw-again-psw-change"
                       required
                       placeholder="Şifrə təkrarı"
                     />
                     <button
                       type="button"
-                      class="show-psw-btn"
+                      className="show-psw-btn-psw-change"
                       onClick={togglePassword}
                     >
                       <img src="/images/general icons (3).svg" alt="" />
@@ -104,12 +104,12 @@ function PasswordChange() {
                   </div>
                 </label>
               </div>
-              <div class="submit">
-                <button type="submit" class="continue-btn">
+              <div className="submit-psw-change">
+                <button type="submit" className="continue-btn-psw-change">
                   Davam et
                 </button>
               </div>
-              <div class="login">
+              <div className="login-psw-change">
                 <p>
                   Ferrum kabinetin var?{" "}
                   <Link to={"/Login"}>

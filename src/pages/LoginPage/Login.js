@@ -42,9 +42,9 @@ function Login() {
           </div>
         </div>
         <div className="right">
-          <div className="right-con">
+          <div className="right-con-login">
             <div className="login-txt">
-              <div className="back-btn">
+              <div className="back-btn-login">
                 <Link to={"/CreateAccountFin"}>
                   <button type="button">
                     <img
@@ -59,50 +59,50 @@ function Login() {
             </div>
             <form
               onSubmit={handleSubmit}
-              className="form"
+              className="form-login"
               action=""
               name="loginForm"
             >
-              <div className="fin">
+              <div className="fin-login">
                 <label htmlFor="username">
                   FİN kod <span>*</span>
                   <div>
                     <input
-                      className="login-input"
+                      className="input-login"
                       type="text"
-                      id="username"
+                      // id="username"
                       required
                       placeholder="256AGSJ"
                     />
                     <button
                       type="button"
-                      className="info-btn"
+                      className="info-btn-login"
                       onClick={handleClick}
                     >
                       <img
-                        className="login-popup-icon"
+                        className="popup-icon-login"
                         src="/images/general icons (2).svg"
                         alt=""
                       />
                     </button>
                   </div>
                 </label>
-                <div className={isActive ? "fin-popup" : "hidden"}>
-                  <div className="fin-popup-header">
+                <div className={isActive ? "fin-popup-login" : "hidden"}>
+                  <div className="fin-popup-header-login">
                     <img
-                      className="fin-popup-icon"
+                      className="fin-popup-icon-login"
                       src="/images/general icons(4).svg"
                     />
-                    <p className="fin-nedir">FİN nədir?</p>
+                    <p className="fin-nedir-login">FİN nədir?</p>
                     <button
                       type="button"
-                      className={isActive ? "popup-cancel" : "hidden"}
+                      className={isActive ? "popup-cancel-login" : "hidden"}
                       onClick={cancelClick}
                     >
                       <img src="/images/general icons(5).svg" />
                     </button>
                   </div>
-                  <div className="fin-popup-txt">
+                  <div className="fin-popup-txt-login">
                     <p>
                       FİN kod 7 simvoldan ibarətdir və axırıncı sətirdə
                       göstərilən son səkkiz simvolun ilk yeddisi təşkil edir.
@@ -113,39 +113,39 @@ function Login() {
                   </div>
                 </div>
               </div>
-              <div className="password">
-                <label htmlFor="psw">
+              <div className="password-login">
+                <label htmlFor="psw-login">
                   Şifrə <span>*</span>
                   <div>
                     <input
-                      className="login-input"
+                      className="input-login"
                       type={passwordShown ? "text" : "password"}
-                      id="psw"
+                      id="psw-login"
                       required
                       placeholder="Şifrə"
                     />
                     <button
                       type="button"
-                      className="show-psw-btn"
+                      className="show-psw-btn-login"
                       onClick={togglePassword}
                     >
                       <img src="/images/general icons (3).svg" alt="" />
                     </button>
                   </div>
                 </label>
-                <div className="forgot-psw">
+                <div className="forgot-psw-login">
                   <Link to={"/ResetPassword"}>
                     <p>Şifrəni unutmusan?</p>
                   </Link>
                 </div>
               </div>
 
-              <div className="submit">
-                <button type="submit" className="login-btn">
+              <div className="submit-login">
+                <button type="submit" className="submit-btn-login">
                   Daxil ol
                 </button>
               </div>
-              <div className="register">
+              <div className="register-login">
                 <p>
                   Ferrum kabinetin yoxdur?
                   <Link to={"/CreateAccountFin"}>

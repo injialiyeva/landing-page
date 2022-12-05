@@ -38,7 +38,7 @@ body {
   height: 100%;
 }
 
-.right-con {
+.right-con-login {
   width: 381px;
   height: 412px;
   margin-top: 237px;
@@ -59,16 +59,17 @@ body {
 }
 
 .login-txt h1 {
+  width: 120px;
+  height: 40px;
   font-family: "Poppins";
   font-style: normal;
   font-weight: 700;
   font-size: 32px;
   line-height: 40px;
   color: #101923;
-  margin-left: 16px;
 }
 
-.back-btn {
+.back-btn-login {
   width: 32px;
   height: 32px;
   background: #ebf1ff;
@@ -80,7 +81,7 @@ body {
   margin-top: 4px;
 }
 
-.back-btn button {
+.back-btn-login button {
   border: none;
 }
 
@@ -96,7 +97,7 @@ label span {
   color: red;
 }
 
-.login-input {
+.input-login {
   width: 381px;
   height: 48px;
   background: #fafbff;
@@ -120,34 +121,36 @@ label span {
   color: #b8b9b9;
 }
 
-.login-input {
+.input-login {
   display: flex;
 }
 
-.info-btn {
+.info-btn-login {
   margin-left: -28px;
+  margin-top: 19px;
   border: none;
   width: 16px;
   height: 16px;
   background-color: #fafbff;
 }
 
-.login-popup-icon {
+.popup-icon-login {
   margin-bottom: -3px;
 }
 
-.show-psw-btn {
+.show-psw-btn-login {
   border: none;
+  height: 16px;
   margin-left: -29px;
-  margin-top: 1px;
+  margin-top: 18px;
   background: #fafbff;
 }
 
-.show-psw-btn img {
+.show-psw-btn-login img {
   margin-bottom: -2px;
 }
 
-.fin-popup {
+.fin-popup-login {
   width: 192px;
   height: 269px;
   background: #4e4f51;
@@ -163,7 +166,7 @@ label span {
   display: none;
 }
 
-.popup-cancel {
+.popup-cancel-login {
   border: none;
   background-color: #4e4f51;
   position: absolute;
@@ -172,12 +175,12 @@ label span {
   cursor: pointer;
 }
 
-.fin-popup-icon {
+.fin-popup-icon-login {
   width: 16px;
   height: 16px;
 }
 
-.fin-popup-header {
+.fin-popup-header-login {
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -201,7 +204,7 @@ label span {
   margin-left: 10px;
 } */
 
-.fin-nedir {
+.fin-nedir-login {
   font-family: "Poppins";
   font-style: normal;
   font-weight: 500;
@@ -210,12 +213,12 @@ label span {
   color: #ffffff;
 }
 
-.fin-popup-txt {
+.fin-popup-txt-login {
   width: 160px;
   height: 80px;
 }
 
-.fin-popup-txt p {
+.fin-popup-txt-login p {
   font-style: normal;
   font-weight: 400;
   font-size: 12px;
@@ -227,7 +230,7 @@ label span {
   flex-grow: 0;
 }
 
-.forgot-psw {
+.forgot-psw-login {
   font-style: normal;
   font-weight: 500;
   font-size: 14px;
@@ -237,7 +240,7 @@ label span {
   margin-bottom: 40px;
 }
 
-.forgot-psw p {
+.forgot-psw-login p {
   font-style: normal;
   font-weight: 500;
   font-size: 14px;
@@ -247,15 +250,15 @@ label span {
   text-decoration: none;
 }
 
-.forgot-psw :link {
+.forgot-psw-login :link {
   text-decoration: none;
 }
 
-.password {
+.password-login {
   margin-top: 24px;
 }
 
-.submit {
+.submit-login {
   display: flex;
   flex-direction: row;
   justify-content: center;
@@ -269,7 +272,7 @@ label span {
   margin-bottom: 16px;
 }
 
-.submit button {
+.submit-login button {
   border: none;
   font-family: "Poppins";
   font-style: normal;
@@ -281,7 +284,7 @@ label span {
   color: #ffffff;
 }
 
-.register {
+.register-login {
   width: 292px;
   height: 24px;
   font-weight: 400;
@@ -290,10 +293,10 @@ label span {
   color: #4e4f51;
 }
 
-.register :link {
+.register-login :link {
   text-decoration: none;
 }
 
-.register p span {
+.register-login p span {
   color: #4a5fe5;
 }
