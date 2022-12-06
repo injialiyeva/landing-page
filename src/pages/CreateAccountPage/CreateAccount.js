@@ -5,6 +5,7 @@ import { Link } from "react-router-dom";
 
 function CreateAccount() {
   const [isActive, setIsActive] = useState(false);
+  const [overlayState, setOverlayState] = useState(false);
 
   const handleClick = (event) => {
     if (!isActive) {
@@ -32,11 +33,15 @@ function CreateAccount() {
 
   const [otp, setOtp] = useState(false);
   const handleClickOpen = () => {
+    if (!overlayState) {
+      setOverlayState((current) => !current);
+    }
     setOtp(!otp);
   };
 
   const closeOtp = () => {
     setOtp(false);
+    setOverlayState(false);
   };
 
   const handleFocus = (e) => {
@@ -73,7 +78,7 @@ function CreateAccount() {
               <h1>Hesab yaradın</h1>
             </div>
             <form
-              onSubmit={handleSubmit}
+              // onSubmit={handleSubmit}
               className="registerFormCreateAcc"
               action=""
             >
@@ -193,63 +198,75 @@ function CreateAccount() {
           </div>
         </div>
 
-        {otp ? (
-          <div id="overlay" className="otp">
-            <form action="">
-              <div className="otp-header">
-                <p>OTP kodu daxil edin</p>
-                <button type="submit" onClick={closeOtp}>
-                  <img src="/images/close-circle.svg" alt="" />
-                </button>
-              </div>
-              <div className="otp-txt">
-                <p>
-                  +994 (**) *** ** 78 nömrəsinə göndərilən bir dəfəlik şifrəni
-                  daxil edin:
-                </p>
-              </div>
-              <div className="otp-code">
-                <input
-                  onChange={handleFocus}
-                  autoFocus={true}
-                  className="otp-inputs"
-                  type="number"
-                  name=""
-                  id=""
-                />
-                <input
-                  onChange={handleFocus}
-                  className="otp-inputs"
-                  type="number"
-                  name=""
-                  id=""
-                />
-                <input
-                  onChange={handleFocus}
-                  className="otp-inputs"
-                  type="number"
-                  name=""
-                  id=""
-                />
-                <input
-                  onChange={handleFocus}
-                  className="otp-inputs"
-                  type="number"
-                  maxLength={1}
-                  name=""
-                  id=""
-                />
-              </div>
-              <div className="otb-submit">
-                <button type="submit" className="otb-submit-btn">
-                  Tamamla
-                </button>
-              </div>
-            </form>
-          </div>
-        ) : (
-          ""
-        )}
+        <div className={overlayState ? "overlay-active" : "hidden"}>
+          {otp ? (
+            <div className="otp-div">
+              <form action="" onSubmit={handleSubmit}>
+                <div className="otp-header">
+                  <p>OTP kodu daxil edin</p>
+                  <button
+                    type="button"
+                    className={
+                      overlayState ? "otp-cancel-button" : "overlay-hidden"
+                    }
+                    onClick={closeOtp}
+                  >
+                    <img src="/images/close-circle.svg" alt="" />
+                  </button>
+                </div>
+                <div className="otp-txt">
+                  <p>
+                    +994 (**) *** ** 78 nömrəsinə göndərilən bir dəfəlik şifrəni
+                    daxil edin:
+                  </p>
+                </div>
+                <div className="otp-code">
+                  <input
+                    onChange={handleFocus}
+                    autoFocus={true}
+                    className="otp-inputs"
+                    type="number"
+                    name=""
+                    id=""
+                  />
+                  <input
+                    onChange={handleFocus}
+                    className="otp-inputs"
+                    type="number"
+                    name=""
+                    id=""
+                  />
+                  <input
+                    onChange={handleFocus}
+                    className="otp-inputs"
+                    type="number"
+                    name=""
+                    id=""
+                  />
+                  <input
+                    onChange={handleFocus}
+                    className="otp-inputs"
+                    type="number"
+                    maxLength={1}
+                    name=""
+                    id=""
+                  />
+                </div>
+                <div className="otb-submit">
+                  <button
+                    onClick={handleSubmit}
+                    type="submit"
+                    className="otb-submit-btn"
+                  >
+                    Tamamla
+                  </button>
+                </div>
+              </form>
+            </div>
+          ) : (
+            ""
+          )}
+        </div>
       </div>
     </div>
   );

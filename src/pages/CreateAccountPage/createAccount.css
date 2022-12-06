@@ -13,7 +13,7 @@ body {
 }
 
 .main-container {
-  width: 1440px;
+  width: 100%;
   height: 100%;
   background: #ffffff;
   display: flex;
@@ -88,6 +88,7 @@ body {
 .back-btn-create-acc button {
   border: none;
   padding-top: 3px;
+  cursor: pointer;
 }
 
 .name-create-acc,
@@ -219,6 +220,7 @@ body {
   color: #ffffff;
   background: #2e43c9;
   border: none;
+  cursor: pointer;
 }
 
 .login-create-acc {
@@ -239,7 +241,23 @@ body {
   color: #4a5fe5;
 }
 
-.otp {
+.overlay-active {
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 2;
+  position: absolute;
+}
+
+.overlay-hidden {
+  display: none;
+}
+
+.otp-div {
   width: 350px;
   height: 304px;
   left: 543px;
@@ -247,6 +265,7 @@ body {
   padding: 32px;
   position: absolute;
   background: #ffffff;
+  /* background-color: rgba(0, 0, 0, 0.5); */
   border-radius: 10px;
 }
 
@@ -271,16 +290,18 @@ body {
   color: #101923;
 }
 
-.otp-header button {
+.otp-cancel-button {
   width: 24px;
   height: 24px;
   border: none;
   background: #ffffff;
+  cursor: pointer;
 }
 
 .otp-header button img {
   width: 24px;
   height: 24px;
+  cursor: pointer;
 }
 
 .otp-txt {
@@ -342,6 +363,7 @@ input::-webkit-inner-spin-button {
 }
 
 .otb-submit button {
+  cursor: pointer;
   border: none;
   font-family: "Poppins";
   font-style: normal;
