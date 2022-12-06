@@ -1,9 +1,30 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
+import axios from "axios";
 import "./createAccount.css";
 import { useNavigate } from "react-router-dom";
 import { Link } from "react-router-dom";
+import Login from "../LoginPage/Login";
 
 function CreateAccount() {
+  // const [list, getList] = useState("");
+
+  // const url =
+  //   "http://172.16.10.132:3574/api/v1/db/data/v1/FerrumCapital-test/users?limit=25&shuffle=0&offset=0/";
+
+  // useEffect(() => {
+  //   getAllList();
+  // }, []);
+
+  // const getAllList = () => {
+  //   axios
+  //     .get(`${url}fin`)
+  //     .then((response) => {
+  //       const allList = response.data.list.allList;
+  //       getList(allList);
+  //     })
+  //     .catch((error) => console.error(`Error: ${error}`));
+  // };
+
   const [isActive, setIsActive] = useState(false);
   const [overlayState, setOverlayState] = useState(false);
 
@@ -45,6 +66,7 @@ function CreateAccount() {
   };
 
   const handleFocus = (e) => {
+    e.target.style.border = "1px solid #4A5FE5";
     if (e.target.nextSibling) e.target.nextSibling.focus();
   };
 
@@ -246,7 +268,7 @@ function CreateAccount() {
                   <input
                     onChange={handleFocus}
                     className="otp-inputs"
-                    type="number"
+                    type="text"
                     maxLength={1}
                     name=""
                     id=""
@@ -269,6 +291,7 @@ function CreateAccount() {
         </div>
       </div>
     </div>
+    // <Login list={list} />
   );
 }
 
