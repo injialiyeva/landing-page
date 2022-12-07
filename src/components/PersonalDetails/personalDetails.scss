@@ -1,0 +1,179 @@
+.personalDetails {
+  border: 1px solid red;
+  width: 688px;
+  height: 365px;
+  margin-top: 295px;
+  margin-left: 624px;
+}
+
+label {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 24px;
+  color: #4e4f51;
+}
+
+input {
+  border: none;
+  outline: none;
+}
+
+span {
+  color: red($color: #000000);
+}
+
+.personalDetails-inputs {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 0px;
+  width: 688px;
+  height: 277px;
+  .personalDetails-inputs-name-fin {
+    display: flex;
+    border: 1px solid red;
+    margin-bottom: 24px;
+    gap: 20px;
+    .personDetails-name,
+    .personalDetails-fin {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      padding: 0px;
+      gap: 4px;
+      width: 334px;
+      height: 76px;
+    }
+  }
+  .personalDetails-inputs-surname-fathername {
+    border: 1px solid red;
+    .personDetails-surname,
+    .personalDetails-fathername {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      padding: 0px;
+      gap: 4px;
+      width: 334px;
+      height: 76px;
+    }
+    .personalDetails-fathername {
+      margin-top: 24px;
+    }
+  }
+}
+
+.personalDetails-inputs-bottom {
+  display: flex;
+  gap: 20px;
+}
+
+.personalDetails-id-card {
+  width: 334px;
+  height: 177px;
+  border: 1px solid red;
+  .personalDetails-id-inputs {
+    display: flex;
+    gap: 16px;
+    input {
+      width: 159px;
+      height: 149px;
+      border: 1px dashed #4a5fe5;
+      background: #fafbff;
+    }
+  }
+}
+
+.personDetails-input {
+  //   border: 1px solid red;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 12px 16px;
+  gap: 8px;
+  width: 334px;
+  height: 48px;
+  background: #fafbff;
+  border: 1px solid #ebf1ff;
+  border-radius: 12px;
+}
+
+.personalDetails-buttons {
+  border: 1px solid red;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 0px;
+  gap: 20px;
+  width: 688px;
+  height: 48px;
+  margin-top: 40px;
+  .personalDetails-skip-btn {
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 12px 24px;
+    gap: 8px;
+    width: 334px;
+    height: 48px;
+    border: 1px solid #4a5fe5;
+    border-radius: 1000px;
+    button {
+      cursor: pointer;
+      border: none;
+      width: 144px;
+      height: 24px;
+      font-family: "Poppins";
+      font-style: normal;
+      font-weight: 500;
+      font-size: 16px;
+      line-height: 24px;
+      letter-spacing: 0.02em;
+      color: #4a5fe5;
+      background-color: white;
+    }
+  }
+  .personalDetails-continue-btn {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 12px 24px;
+    gap: 8px;
+    width: 334px;
+    height: 48px;
+    background: #2e43c9;
+    border-radius: 1000px;
+    button {
+      //   width: 82px;
+      cursor: pointer;
+      border: none;
+      height: 24px;
+      font-family: "Poppins";
+      font-style: normal;
+      font-weight: 500;
+      font-size: 16px;
+      line-height: 24px;
+      letter-spacing: 0.02em;
+      color: #ffffff;
+      background: #2e43c9;
+    }
+  }
+}
+
+.personalDetails-fin-input {
+  button {
+    border: none;
+    border: none;
+    width: 16px;
+    height: 16px;
+    background-color: #fafbff;
+    margin-top: 0;
+    margin-left: 114px;
+    cursor: pointer;
+  }
+}

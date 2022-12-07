@@ -3,12 +3,17 @@ import ReactDOM from "react-dom/client";
 import { StrictMode } from "react";
 import logo from "./logo.svg";
 import "./App.css";
+import "../src/components/PersonalDetails/personalDetails.scss";
 import Login from "./pages/LoginPage/Login";
 import CreateAccount from "./pages/CreateAccountPage/CreateAccount";
 import CreateAccountFin from "./pages/CreateAccountFinPage/CreateAccountFin";
 import PasswordChange from "./pages/PasswordChangePage/PasswordChange";
 import ResetPassword from "./pages/ResetPasswordPage/ResetPassword";
 import CreatePassword from "./pages/CreatePasswordPage/CreatePassword";
+import ContactDetails from "./components/ContactDetails/ContactDetails";
+import LimitRequest from "./components/LimitRequest/LimitRequest";
+import PersonalDetails from "./components/PersonalDetails/PersonalDetails";
+import WorkDetails from "./components/WorkDetails/WorkDetails";
 import { useState } from "react";
 import { Route } from "react-router-dom";
 import { BrowserRouter as Router, Routes } from "react-router-dom";
@@ -42,6 +47,10 @@ function App() {
         <Route path="/PasswordChange" element={<PasswordChange />} />
         <Route path="/ResetPassword" element={<ResetPassword />} />
         <Route path="/CreatePassword" element={<CreatePassword />} />
+        <Route path="/ContactDetails" element={<ContactDetails />} />
+        <Route path="/LimitRequest" element={<LimitRequest />} />
+        <Route path="/PersonalDetails" element={<PersonalDetails />} />
+        <Route path="/WorkDetails" element={<WorkDetails />} />
       </Routes>
     </Router>
   );
