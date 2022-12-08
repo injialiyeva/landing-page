@@ -10,7 +10,7 @@ import CreateAccountFin from "./pages/CreateAccountFinPage/CreateAccountFin";
 import PasswordChange from "./pages/PasswordChangePage/PasswordChange";
 import ResetPassword from "./pages/ResetPasswordPage/ResetPassword";
 import CreatePassword from "./pages/CreatePasswordPage/CreatePassword";
-import AccountPage from "./pages/AccountPage/AccountPage";
+import Account from "./pages/AccountPage/Account";
 import LeftUp from "./pages/LimitRequestLeftUp/LeftUp";
 import ContactDetails from "./components/ContactDetails/ContactDetails";
 import LimitRequest from "./components/LimitRequest/LimitRequest";
@@ -49,7 +49,7 @@ function App() {
         <Route path="/PasswordChange" element={<PasswordChange />} />
         <Route path="/ResetPassword" element={<ResetPassword />} />
         <Route path="/CreatePassword" element={<CreatePassword />} />
-        <Route path="/AccountPage" element={<AccountPage />} />
+        <Route path="/Account" element={<Account />} />
         <Route path="/LeftUp" element={<LeftUp />} />
         <Route path="/ContactDetails" element={<ContactDetails />} />
         <Route path="/LimitRequest" element={<LimitRequest />} />

@@ -1,0 +1,118 @@
+.contactDetails-main-con {
+  position: relative;
+  display: flex;
+}
+
+label {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 24px;
+  color: #4e4f51;
+}
+
+input {
+  border: none;
+  outline: none;
+}
+
+span {
+  color: 0;
+}
+
+.contactDetails {
+  position: absolute;
+  width: 688px;
+  left: 624px;
+  top: 316px;
+}
+.contactDetails .contactDetails-inputs {
+  width: 688px;
+  height: 176px;
+  margin-bottom: 48px;
+}
+.contactDetails .contactDetails-inputs .contactDetails-inputs-num-email {
+  display: flex;
+  gap: 20px;
+  margin-bottom: 24px;
+}
+.contactDetails .contactDetails-inputs .contactDetails-inputs-num2-cont {
+  display: flex;
+  gap: 20px;
+}
+.contactDetails .contactDetails-buttons {
+  width: 688px;
+  height: 49px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0px;
+  gap: 16px;
+}
+.contactDetails .contactDetails-buttons .contactDetails-back-btn {
+  cursor: pointer;
+  border: none;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 12px 16px;
+  gap: 8px;
+  width: 91px;
+  height: 48px;
+  background: #ebf1ff;
+  border-radius: 1000px;
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 24px;
+  letter-spacing: 0.02em;
+  color: #4a5fe5;
+}
+.contactDetails .contactDetails-buttons .contactDetails-continue-btn {
+  cursor: pointer;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 12px 24px;
+  gap: 8px;
+  width: 334px;
+  height: 48px;
+  background: #2e43c9;
+  border-radius: 1000px;
+  border: none;
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 24px;
+  letter-spacing: 0.02em;
+  color: #ffffff;
+}
+
+.contactDetails-input {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 12px 16px;
+  gap: 8px;
+  width: 334px;
+  height: 48px;
+  background: #fafbff;
+  border: 1px solid #ebf1ff;
+  border-radius: 12px;
+  margin-top: 4px;
+}
+
+.contactDetails-contact-type {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 0px;
+  gap: 4px;
+  width: 334px;
+  height: 76px;
+}/*# sourceMappingURL=contactDetails.css.map */
