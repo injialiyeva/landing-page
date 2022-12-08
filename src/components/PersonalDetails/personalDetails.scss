@@ -1,9 +1,17 @@
+.personalDetails-main-con {
+  position: relative;
+  display: flex;
+}
+
 .personalDetails {
-  border: 1px solid red;
+  position: absolute;
+  // border: 1px solid red;
   width: 688px;
   height: 365px;
-  margin-top: 295px;
-  margin-left: 624px;
+  left: 624px;
+  top: 295px;
+  // margin-top: 295px;
+  // margin-left: 624px;
 }
 
 label {
@@ -32,7 +40,7 @@ span {
   height: 277px;
   .personalDetails-inputs-name-fin {
     display: flex;
-    border: 1px solid red;
+    // border: 1px solid red;
     margin-bottom: 24px;
     gap: 20px;
     .personDetails-name,
@@ -47,7 +55,7 @@ span {
     }
   }
   .personalDetails-inputs-surname-fathername {
-    border: 1px solid red;
+    // border: 1px solid red;
     .personDetails-surname,
     .personalDetails-fathername {
       display: flex;
@@ -67,20 +75,59 @@ span {
 .personalDetails-inputs-bottom {
   display: flex;
   gap: 20px;
-}
-
-.personalDetails-id-card {
-  width: 334px;
-  height: 177px;
-  border: 1px solid red;
+  .personalDetails-id-div {
+    width: 334px;
+    height: 177px;
+    // border: 1px solid red;
+    p {
+      font-style: normal;
+      font-weight: 400;
+      font-size: 14px;
+      line-height: 24px;
+      color: #4e4f51;
+      margin-bottom: 4px;
+      span {
+        color: red;
+      }
+    }
+  }
   .personalDetails-id-inputs {
     display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    padding: 0px;
     gap: 16px;
-    input {
-      width: 159px;
-      height: 149px;
-      border: 1px dashed #4a5fe5;
-      background: #fafbff;
+    .personalDetails-id-input {
+      box-sizing: border-box;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      position: relative;
+      label {
+        cursor: pointer;
+        padding: 12px 16px;
+        width: 159px;
+        height: 149px;
+        background: #fafbff;
+        border: 1px dashed #4a5fe5;
+      }
+      input {
+        display: none;
+      }
+      img {
+        margin-top: -100px;
+        cursor: pointer;
+      }
+      p {
+        cursor: pointer;
+        font-style: normal;
+        font-weight: 400;
+        font-size: 12px;
+        line-height: 16px;
+        color: #4a5fe5;
+        margin-top: 4px;
+      }
     }
   }
 }
@@ -101,7 +148,7 @@ span {
 }
 
 .personalDetails-buttons {
-  border: 1px solid red;
+  // border: 1px solid red;
   display: flex;
   flex-direction: row;
   align-items: center;

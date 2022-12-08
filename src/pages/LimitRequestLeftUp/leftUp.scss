@@ -1,0 +1,106 @@
+.leftUp-main-con {
+  width: 100%;
+  height: 100%;
+  background: #ffffff;
+  display: flex;
+  .limitRequestLU-left {
+    position: relative;
+    .limitRequestLU-background-img {
+      width: 496px;
+      height: 100%;
+      img {
+        height: 100%;
+      }
+    }
+    .limitRequestLU-logo {
+      position: absolute;
+      width: 107.64px;
+      height: 32px;
+      left: 56px;
+      top: 56px;
+    }
+  }
+  .limitRequestLU-up-secs {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 0px;
+    gap: 32px;
+    width: 675px;
+    height: 68px;
+    margin-left: 128px;
+    margin-top: 67px;
+    border-radius: 10px;
+    // border: 1px solid red;
+    .limitRequestLU-up-sec {
+      //   border: 1px solid blue;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: flex-start;
+      padding: 0px;
+      gap: 4px;
+      width: 144.75px;
+      height: 68px;
+      flex: none;
+      order: 0;
+      align-self: stretch;
+      flex-grow: 0;
+      .limitRequestLU-up-sec-icon {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        padding: 24px;
+        gap: 8px;
+        width: 40px;
+        height: 40px;
+        background: #4a5fe5;
+        border-radius: 2000px;
+        flex: none;
+        order: 0;
+        flex-grow: 0;
+      }
+      .limitRequestLU-up-sec-txt {
+        // width: 125px;
+        height: 24px;
+        font-family: "Poppins";
+        font-style: normal;
+        font-weight: 600;
+        font-size: 14px;
+        line-height: 24px;
+        color: #4a5fe5;
+        flex: none;
+        order: 1;
+        flex-grow: 0;
+      }
+      button {
+        cursor: pointer;
+        border: none;
+        background-color: white;
+      }
+    }
+  }
+  .limitRequestLU-up-header {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 0px;
+    gap: 16px;
+    width: 250px;
+    height: 40px;
+    margin-top: 80px;
+    margin-left: 128px;
+    h1 {
+      font-family: "Poppins";
+      font-style: normal;
+      font-weight: 700;
+      font-size: 32px;
+      line-height: 40px;
+      color: #101923;
+      flex: none;
+      order: 0;
+      flex-grow: 0;
+    }
+  }
+}
