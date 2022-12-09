@@ -1,20 +1,14 @@
-import React, { Component, useContext } from "react";
+import React, { useState, useContext } from "react";
 import LeftUp from "../../pages/LimitRequestLeftUp/LeftUp";
 import { AccountContext } from "../../AccountContext";
 import "../../pages/LimitRequestLeftUp/leftUp.scss";
 import "../PersonalDetails/personalDetails.scss";
 
-class PersonalDetails extends Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      value: "",
-    };
-    // const { setInput } = useContext(AccountContext);
-  }
+function PersonalDetails() {
+  const { input, setInput } = useContext(AccountContext);
 
-  render() {
-    return (
+  return (
+    <div>
       <div className="personalDetails-main-con">
         <LeftUp />
         <div className="personalDetails">
@@ -29,7 +23,7 @@ class PersonalDetails extends Component {
                         type="text"
                         required
                         onChange={(event) => {
-                          this.setInput(event.target.value);
+                          setInput(event.target.value);
                         }}
                       />
                     </div>
@@ -108,18 +102,19 @@ class PersonalDetails extends Component {
               </div>
             </div>
             <div className="personalDetails-buttons">
-              <div className="personalDetails-skip-btn">
-                <button type="submit">Bu mərhələni keç</button>
-              </div>
-              <div className="personalDetails-continue-btn">
-                <button type="submit">Davam et</button>
-              </div>
+              <button className="personalDetails-skip-btn" type="submit">
+                Bu mərhələni keç
+              </button>
+
+              <button className="personalDetails-continue-btn" type="submit">
+                Davam et
+              </button>
             </div>
           </form>
         </div>
       </div>
-    );
-  }
+    </div>
+  );
 }
 
 export default PersonalDetails;

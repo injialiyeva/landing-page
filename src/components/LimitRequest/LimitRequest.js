@@ -1,11 +1,11 @@
-import React, { Component } from "react";
+import React from "react";
 import LeftUp from "../../pages/LimitRequestLeftUp/LeftUp";
 import "../../pages/LimitRequestLeftUp/leftUp.scss";
 import "../LimitRequest/limitRequest.scss";
 
-class LimitRequest extends Component {
-  render() {
-    return (
+function LimitRequest() {
+  return (
+    <div>
       <div className="limitRequest-main-con">
         <LeftUp />
         <div className="limitRequest">
@@ -86,8 +86,8 @@ class LimitRequest extends Component {
           </form>
         </div>
       </div>
-    );
-  }
+    </div>
+  );
 }
 
 export default LimitRequest;

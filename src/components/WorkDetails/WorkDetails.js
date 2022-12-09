@@ -1,11 +1,11 @@
-import React, { Component } from "react";
+import React from "react";
 import LeftUp from "../../pages/LimitRequestLeftUp/LeftUp";
 import "../../pages/LimitRequestLeftUp/leftUp.scss";
 import "../WorkDetails/workDetails.scss";
 
-class WorkDetails extends Component {
-  render() {
-    return (
+function WorkDetails() {
+  return (
+    <div>
       <div className="workDetails-main-con">
         <LeftUp />
         <div className="workDetails">
@@ -69,8 +69,8 @@ class WorkDetails extends Component {
           </form>
         </div>
       </div>
-    );
-  }
+    </div>
+  );
 }
 
 export default WorkDetails;

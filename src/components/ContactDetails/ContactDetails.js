@@ -1,11 +1,11 @@
-import React, { Component } from "react";
+import React from "react";
 import LeftUp from "../../pages/LimitRequestLeftUp/LeftUp";
 import "../../pages/LimitRequestLeftUp/leftUp.scss";
 import "../ContactDetails/contactDetails.scss";
 
-class ContactDetails extends Component {
-  render() {
-    return (
+function ContactDetails() {
+  return (
+    <div>
       <div className="contactDetails-main-con">
         <LeftUp />
         <div className="contactDetails">
@@ -65,8 +65,8 @@ class ContactDetails extends Component {
           </form>
         </div>
       </div>
-    );
-  }
+    </div>
+  );
 }
 
 export default ContactDetails;
