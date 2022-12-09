@@ -1,9 +1,18 @@
-import React, { Component } from "react";
+import React, { Component, useContext } from "react";
 import LeftUp from "../../pages/LimitRequestLeftUp/LeftUp";
+import { AccountContext } from "../../AccountContext";
 import "../../pages/LimitRequestLeftUp/leftUp.scss";
 import "../PersonalDetails/personalDetails.scss";
 
 class PersonalDetails extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      value: "",
+    };
+    // const { setInput } = useContext(AccountContext);
+  }
+
   render() {
     return (
       <div className="personalDetails-main-con">
@@ -16,7 +25,13 @@ class PersonalDetails extends Component {
                   <label htmlFor="">
                     Ad <span>*</span>
                     <div className="personDetails-name-input personDetails-input">
-                      <input type="text" required />
+                      <input
+                        type="text"
+                        required
+                        onChange={(event) => {
+                          this.setInput(event.target.value);
+                        }}
+                      />
                     </div>
                   </label>
                 </div>

@@ -1,13 +1,20 @@
-import React, { useState } from "react";
-import "./account.scss";
-import { useNavigate } from "react-router-dom";
+// import React, { createContext, Component } from "react";
+// // import { useState } from "react";
+// import LeftUp from "../LimitRequestLeftUp/LeftUp";
+// import PersonalDetails from "../../components/PersonalDetails/PersonalDetails";
+// import "./account.scss";
+// import LimitRequest from "../../components/LimitRequest/LimitRequest";
+// // import { useNavigate } from "react-router-dom";
 
-function Account() {
-  return (
-    <div>
-      <h1>Hello</h1>
-    </div>
-  );
-}
+// export const AccountContext = React.createContext();
 
-export default Account;
+// function Account() {
+//   return (
+//     <div>
+//       <LeftUp />
+//       <PersonalDetails />
+//     </div>
+//   );
+// }
+
+// export default Account;
