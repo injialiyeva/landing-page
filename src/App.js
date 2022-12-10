@@ -17,6 +17,7 @@ import LimitRequest from "./components/LimitRequest/LimitRequest";
 import PersonalDetails from "./components/PersonalDetails/PersonalDetails";
 import WorkDetails from "./components/WorkDetails/WorkDetails";
 import { AccountContext } from "./AccountContext";
+import UserData from "./components/UserData";
 import { useState } from "react";
 import { Route } from "react-router-dom";
 import { BrowserRouter as Router, Routes } from "react-router-dom";
@@ -40,11 +41,9 @@ function App() {
     setPasswordShown(!passwordShown);
   };
 
-  const [input, setInput] = useState("");
-
   return (
     <div>
-      <AccountContext.Provider value={{ input, setInput }}>
+      <AccountContext.Provider value="Hellooo">
         <Router>
           <Routes>
             <Route path="/" element={<Login />} />
@@ -60,6 +59,7 @@ function App() {
             <Route path="/LimitRequest" element={<LimitRequest />} />
             <Route path="/PersonalDetails" element={<PersonalDetails />} />
             <Route path="/WorkDetails" element={<WorkDetails />} />
+            <Route path="/UserData" element={<UserData />} />
           </Routes>
         </Router>
       </AccountContext.Provider>
