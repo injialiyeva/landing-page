@@ -4,26 +4,29 @@ import { AccountContext } from "../../AccountContext";
 import "../../pages/LimitRequestLeftUp/leftUp.scss";
 import "../PersonalDetails/personalDetails.scss";
 
-function PersonalDetails() {
+function PersonalDetails({ name, fin, surname, fatherName, changeDetails }) {
   // const message = useContext(AccountContext);
 
-  const [details, setDetails] = useState({
-    name: "",
-    fin: "",
-    surname: "",
-    fatherName: "",
-  });
+  // const [details, setDetails] = useState({
+  //   name: "",
+  //   fin: "",
+  //   surname: "",
+  //   fatherName: "",
+  // });
 
   const handleChange = (e) => {
     const { name, value } = e.target;
-    setDetails((prev) => {
-      return { ...prev, [name]: value };
-    });
+    changeDetails(value);
+
+    // setDetails((prev) => {
+    //   return { ...prev, [name]: value };
+    // });
   };
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    console.log(details);
+    // console.log(details);
+
     // setActive(() => {
     //   return active + 1;
     // });

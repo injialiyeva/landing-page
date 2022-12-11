@@ -3,24 +3,26 @@ import LeftUp from "../../pages/LimitRequestLeftUp/LeftUp";
 import "../../pages/LimitRequestLeftUp/leftUp.scss";
 import "../WorkDetails/workDetails.scss";
 
-function WorkDetails() {
-  const [details, SetDetails] = useState({
-    workPlace: "",
-    salary: "",
-    workExp: "",
-    salary2: "",
-  });
+function WorkDetails({ workPlace, salary, workExp, salary2, changeDetails }) {
+  // const [details, SetDetails] = useState({
+  //   workPlace: "",
+  //   salary: "",
+  //   workExp: "",
+  //   salary2: "",
+  // });
 
   const handleChange = (e) => {
     const { name, value } = e.target;
-    SetDetails((prev) => {
-      return { ...prev, [name]: value };
-    });
+    changeDetails(value);
+
+    // SetDetails((prev) => {
+    //   return { ...prev, [name]: value };
+    // });
   };
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    console.log(details);
+    // console.log(details);
   };
 
   return (

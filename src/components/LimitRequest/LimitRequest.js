@@ -3,22 +3,24 @@ import LeftUp from "../../pages/LimitRequestLeftUp/LeftUp";
 import "../../pages/LimitRequestLeftUp/leftUp.scss";
 import "../LimitRequest/limitRequest.scss";
 
-function LimitRequest() {
-  const [details, SetDetails] = useState({
-    amount: "",
-    note: "",
-  });
+function LimitRequest({ amount, note, changeDetails }) {
+  // const [details, SetDetails] = useState({
+  //   amount: "",
+  //   note: "",
+  // });
 
   const handleChange = (e) => {
     const { name, value } = e.target;
-    SetDetails((prev) => {
-      return { ...prev, [name]: value };
-    });
+    changeDetails(value);
+
+    // SetDetails((prev) => {
+    //   return { ...prev, [name]: value };
+    // });
   };
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    console.log(details);
+    // console.log(details);
   };
 
   return (

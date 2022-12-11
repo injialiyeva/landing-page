@@ -51,6 +51,10 @@ function App() {
     number: "",
     email: "",
     number2: "",
+    workPlace: "",
+    salary: "",
+    workExp: "",
+    salary2: "",
   });
 
   console.log(details);
@@ -93,9 +97,28 @@ function App() {
                 />
               }
             />
-            <Route path="/LimitRequest" element={<LimitRequest />} />
-
-            <Route path="/WorkDetails" element={<WorkDetails />} />
+            <Route
+              path="/WorkDetails"
+              element={
+                <WorkDetails
+                  workPlace={details.workPlace}
+                  salary={details.salary}
+                  workExp={details.workExp}
+                  salary2={details.salary2}
+                  changeDetails={setDetails}
+                />
+              }
+            />
+            <Route
+              path="/LimitRequest"
+              element={
+                <LimitRequest
+                  amount={details.amount}
+                  note={details.note}
+                  changeDetails={setDetails}
+                />
+              }
+            />
             <Route path="/UserData" element={<UserData />} />
           </Routes>
         </Router>
