@@ -25,6 +25,8 @@ import { BrowserRouter as Router, Routes } from "react-router-dom";
 function App() {
   const [isActive, setIsActive] = useState(false);
 
+  // const [active, setActive] = useState(1);
+
   const handleClick = (event) => {
     if (!isActive) {
       setIsActive((current) => !current);
@@ -41,6 +43,18 @@ function App() {
     setPasswordShown(!passwordShown);
   };
 
+  const [details, setDetails] = useState({
+    name: "",
+    fin: "",
+    surname: "",
+    fatherName: "",
+    number: "",
+    email: "",
+    number2: "",
+  });
+
+  console.log(details);
+
   return (
     <div>
       <AccountContext.Provider value="Hellooo">
@@ -55,9 +69,32 @@ function App() {
             <Route path="/CreatePassword" element={<CreatePassword />} />
             {/* <Route path="/Account" element={<Account />} /> */}
             <Route path="/LeftUp" element={<LeftUp />} />
-            <Route path="/ContactDetails" element={<ContactDetails />} />
+            <Route
+              path="/PersonalDetails"
+              element={
+                <PersonalDetails
+                  // active={active}
+                  name={details.name}
+                  fin={details.fin}
+                  surname={details.surname}
+                  fatherName={details.fatherName}
+                  changeDetails={setDetails}
+                />
+              }
+            />
+            <Route
+              path="/ContactDetails"
+              element={
+                <ContactDetails
+                  number={details.number}
+                  email={details.email}
+                  number2={details.number2}
+                  changeDetails={setDetails}
+                />
+              }
+            />
             <Route path="/LimitRequest" element={<LimitRequest />} />
-            <Route path="/PersonalDetails" element={<PersonalDetails />} />
+
             <Route path="/WorkDetails" element={<WorkDetails />} />
             <Route path="/UserData" element={<UserData />} />
           </Routes>

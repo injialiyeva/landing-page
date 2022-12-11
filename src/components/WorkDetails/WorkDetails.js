@@ -1,22 +1,46 @@
-import React from "react";
+import React, { useState } from "react";
 import LeftUp from "../../pages/LimitRequestLeftUp/LeftUp";
 import "../../pages/LimitRequestLeftUp/leftUp.scss";
 import "../WorkDetails/workDetails.scss";
 
 function WorkDetails() {
+  const [details, SetDetails] = useState({
+    workPlace: "",
+    salary: "",
+    workExp: "",
+    salary2: "",
+  });
+
+  const handleChange = (e) => {
+    const { name, value } = e.target;
+    SetDetails((prev) => {
+      return { ...prev, [name]: value };
+    });
+  };
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    console.log(details);
+  };
+
   return (
     <div>
       <div className="workDetails-main-con">
         <LeftUp />
         <div className="workDetails">
-          <form action="" className="workDetails-form">
+          <form action="" className="workDetails-form" onSubmit={handleSubmit}>
             <div className="workDetails-inputs">
               <div className="workDetails-comp-sal">
                 <div className="workDetails-company">
                   <label htmlFor="">
                     İş yeri <span>*</span>
                     <div className="workDetails-company-input  workDetails-input">
-                      <input type="text" required />
+                      <input
+                        type="text"
+                        required
+                        name="workPlace"
+                        onChange={handleChange}
+                      />
                     </div>
                   </label>
                 </div>
@@ -24,7 +48,11 @@ function WorkDetails() {
                   <label htmlFor="">
                     Gəlir <span>*</span>
                     <div className="workDetails-salary-input workDetails-input">
-                      <input type="number" name="" id="" />
+                      <input
+                        type="number"
+                        name="salary"
+                        onChange={handleChange}
+                      />
                     </div>
                   </label>
                 </div>
@@ -34,7 +62,12 @@ function WorkDetails() {
                   <label htmlFor="">
                     İş təcrübəsi <span>*</span>
                     <div className="workDetails-work-exp workDetails-input">
-                      <input type="text" required />
+                      <input
+                        type="text"
+                        required
+                        name="workExp"
+                        onChange={handleChange}
+                      />
                     </div>
                   </label>
                 </div>
@@ -42,7 +75,11 @@ function WorkDetails() {
                   <label htmlFor="">
                     Əlavə gəliriniz
                     <div className="workDetails-input">
-                      <input type="text" />
+                      <input
+                        type="number"
+                        name="salary2"
+                        onChange={handleChange}
+                      />
                     </div>
                   </label>
                 </div>

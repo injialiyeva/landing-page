@@ -5,21 +5,33 @@ import "../../pages/LimitRequestLeftUp/leftUp.scss";
 import "../PersonalDetails/personalDetails.scss";
 
 function PersonalDetails() {
-  const message = useContext(AccountContext);
+  // const message = useContext(AccountContext);
 
-  const [name, setName] = useState("");
-  const [fin, setFin] = useState("");
-  const [surname, setSurname] = useState("");
-  const [fatherName, setFatherName] = useState("");
+  const [details, setDetails] = useState({
+    name: "",
+    fin: "",
+    surname: "",
+    fatherName: "",
+  });
+
+  const handleChange = (e) => {
+    const { name, value } = e.target;
+    setDetails((prev) => {
+      return { ...prev, [name]: value };
+    });
+  };
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    console.log(name, fin, surname, fatherName);
+    console.log(details);
+    // setActive(() => {
+    //   return active + 1;
+    // });
   };
 
   return (
     <div>
-      <div>{message}</div>
+      {/* <div>{message}</div> */}
       <div className="personalDetails-main-con">
         <LeftUp />
         <div className="personalDetails">
@@ -36,12 +48,9 @@ function PersonalDetails() {
                     <div className="personDetails-name-input personDetails-input">
                       <input
                         type="text"
-                        value={name}
                         required
-                        onChange={(e) => setName(e.target.value)}
-                        // onChange={(event) => {
-                        //   setInput(event.target.value);
-                        // }}
+                        name="name"
+                        onChange={handleChange}
                       />
                     </div>
                   </label>
@@ -53,8 +62,8 @@ function PersonalDetails() {
                       <input
                         type="text"
                         required
-                        value={fin}
-                        onChange={(e) => setFin(e.target.value)}
+                        name="fin"
+                        onChange={handleChange}
                       />
                       <button
                         type="button"
@@ -80,8 +89,8 @@ function PersonalDetails() {
                         <input
                           type="text"
                           required
-                          value={surname}
-                          onChange={(e) => setSurname(e.target.value)}
+                          name="surname"
+                          onChange={handleChange}
                         />
                       </div>
                     </label>
@@ -93,8 +102,8 @@ function PersonalDetails() {
                         <input
                           type="text"
                           required
-                          value={fatherName}
-                          onChange={(e) => setFatherName(e.target.value)}
+                          name="fatherName"
+                          onChange={handleChange}
                         />
                       </div>
                     </label>
@@ -114,8 +123,7 @@ function PersonalDetails() {
                         id="id-input1"
                         type="file"
                         accept="image/png, image/jpeg"
-                        // value={title}
-                        // onChange={(e) => setTitle(e.target.value)}
+                        // onChange={handleChange}
                       />
 
                       <img src="/images/pic-icon.svg" alt="" />
@@ -127,8 +135,7 @@ function PersonalDetails() {
                         id="id-input2"
                         type="file"
                         accept="image/png, image/jpeg"
-                        // value={title}
-                        // onChange={(e) => setTitle(e.target.value)}
+                        // onChange={handleChange}
                       />
                       <img src="/images/pic-icon.svg" alt="" />
                       <p>Arxa üzünü yüklə</p>

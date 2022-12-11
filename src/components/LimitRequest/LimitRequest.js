@@ -1,22 +1,44 @@
-import React from "react";
+import React, { useState } from "react";
 import LeftUp from "../../pages/LimitRequestLeftUp/LeftUp";
 import "../../pages/LimitRequestLeftUp/leftUp.scss";
 import "../LimitRequest/limitRequest.scss";
 
 function LimitRequest() {
+  const [details, SetDetails] = useState({
+    amount: "",
+    note: "",
+  });
+
+  const handleChange = (e) => {
+    const { name, value } = e.target;
+    SetDetails((prev) => {
+      return { ...prev, [name]: value };
+    });
+  };
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    console.log(details);
+  };
+
   return (
     <div>
       <div className="limitRequest-main-con">
         <LeftUp />
         <div className="limitRequest">
-          <form action="" className="limitRequest-form">
+          <form action="" className="limitRequest-form" onSubmit={handleSubmit}>
             <div className="limitRequest-inputs">
               <div className="limitRequest-amount-foundus">
                 <div className="limitRequest-limit-amount">
                   <label htmlFor="">
                     Limit məbləği <span>*</span>
                     <div className="limitRequest-input">
-                      <input type="number" required />
+                      <input
+                        type="number"
+                        required
+                        name="amount"
+                        onChange={handleChange}
+                      />
                     </div>
                   </label>
                 </div>
@@ -33,7 +55,11 @@ function LimitRequest() {
                 <label htmlFor="">
                   Qeyd
                   <div className="limitRequest-textarea">
-                    <textarea name="" id=""></textarea>
+                    <textarea
+                      id=""
+                      name="note"
+                      onChange={handleChange}
+                    ></textarea>
                   </div>
                 </label>
               </div>
