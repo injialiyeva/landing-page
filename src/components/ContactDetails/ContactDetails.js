@@ -1,16 +1,12 @@
 import React from "react";
 import { useState } from "react";
+import { useNavigate } from "react-router-dom";
 import LeftUp from "../../pages/LimitRequestLeftUp/LeftUp";
 import "../../pages/LimitRequestLeftUp/leftUp.scss";
 import "../ContactDetails/contactDetails.scss";
 
 function ContactDetails({ number, email, number2, changeDetails }) {
-  // const [details, SetDetails] = useState({
-  //   number: "",
-  //   email: "",
-  //   number2: "",
-  // });
-
+  const navigate = useNavigate();
   const handleChange = (e) => {
     const { name, value } = e.target;
     changeDetails(value);
@@ -22,6 +18,7 @@ function ContactDetails({ number, email, number2, changeDetails }) {
 
   const handleSubmit = (e) => {
     e.preventDefault();
+
     // console.log();
   };
 
@@ -93,11 +90,19 @@ function ContactDetails({ number, email, number2, changeDetails }) {
               </div>
             </div>
             <div className="contactDetails-buttons">
-              <button type="submit" className="contactDetails-back-btn">
+              <button
+                type="button"
+                className="contactDetails-back-btn"
+                onClick={() => navigate("/LimitRequest/1")}
+              >
                 <img src="/images/general icons.svg" alt="" />
                 Geri
               </button>
-              <button type="submit" className="contactDetails-continue-btn">
+              <button
+                type="button"
+                className="contactDetails-continue-btn"
+                onClick={() => navigate("/LimitRequest/3")}
+              >
                 Davam et
               </button>
             </div>

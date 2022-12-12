@@ -1,7 +1,7 @@
-.personalDetails-main-con {
-  position: relative;
-  display: flex;
-}
+// .personalDetails-main-con {
+//   position: relative;
+//   display: flex;
+// }
 
 .personalDetails {
   position: absolute;
@@ -111,22 +111,28 @@ span {
         height: 149px;
         // background: #fafbff;
         border: 1px dashed #4a5fe5;
+        .label {
+          margin-top: 36px;
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          align-items: center;
+          img {
+            cursor: pointer;
+          }
+          p {
+            cursor: pointer;
+            font-style: normal;
+            font-weight: 400;
+            font-size: 12px;
+            line-height: 16px;
+            color: #4a5fe5;
+            margin-top: 4px;
+          }
+        }
       }
       input {
         display: none;
-      }
-      img {
-        margin-top: -100px;
-        cursor: pointer;
-      }
-      p {
-        cursor: pointer;
-        font-style: normal;
-        font-weight: 400;
-        font-size: 12px;
-        line-height: 16px;
-        color: #4a5fe5;
-        margin-top: 4px;
       }
     }
   }
@@ -212,4 +218,71 @@ span {
     margin-left: 114px;
     cursor: pointer;
   }
+}
+
+.hidden {
+  display: none;
+}
+
+.fin-popup-personal-d {
+  width: 192px;
+  height: 269px;
+  background: #4e4f51;
+  border-radius: 10px;
+  margin-top: 82px;
+  margin-left: 143px;
+  padding: 16px;
+  display: block;
+  position: absolute;
+}
+
+.fin-popup-header-personal-d {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 0px;
+  gap: 10px;
+  width: 160px;
+  height: 24px;
+  margin-bottom: 10px;
+}
+
+.fin-popup-icon-personal-d {
+  width: 16px;
+  height: 16px;
+}
+
+.fin-nedir-personal-d {
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 24px;
+  color: #ffffff;
+}
+
+.popup-cancel-personal-d {
+  border: none;
+  background-color: #4e4f51;
+  position: absolute;
+  bottom: 230px;
+  right: 15px;
+  cursor: pointer;
+}
+
+.fin-popup-txt-personal-d {
+  width: 160px;
+  height: 80px;
+}
+
+.fin-popup-txt-personal-d p {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 16px;
+  color: #fafbff;
+  flex: none;
+  order: 1;
+  align-self: stretch;
+  flex-grow: 0;
 }

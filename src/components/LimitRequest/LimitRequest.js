@@ -1,13 +1,12 @@
 import React, { useState } from "react";
+import { useNavigate } from "react-router-dom";
 import LeftUp from "../../pages/LimitRequestLeftUp/LeftUp";
 import "../../pages/LimitRequestLeftUp/leftUp.scss";
 import "../LimitRequest/limitRequest.scss";
+// import { DateRangePicker } from "@adobe/react-spectrum";
 
 function LimitRequest({ amount, note, changeDetails }) {
-  // const [details, SetDetails] = useState({
-  //   amount: "",
-  //   note: "",
-  // });
+  const navigate = useNavigate();
 
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -82,9 +81,14 @@ function LimitRequest({ amount, note, changeDetails }) {
                 </div>
                 <div className="limitRequest-slot-popup-submit"></div>
               </div> */}
+              {/* <DateRangePicker label="Date range" /> */}
             </div>
             <div className="limitRequest-buttons">
-              <button type="submit" className="limitRequest-back-btn">
+              <button
+                type="button"
+                className="limitRequest-back-btn"
+                onClick={() => navigate("/LimitRequest/3")}
+              >
                 <img src="/images/general icons.svg" alt="" />
                 Geri
               </button>

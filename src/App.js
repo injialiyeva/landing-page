@@ -17,7 +17,6 @@ import LimitRequest from "./components/LimitRequest/LimitRequest";
 import PersonalDetails from "./components/PersonalDetails/PersonalDetails";
 import WorkDetails from "./components/WorkDetails/WorkDetails";
 import { AccountContext } from "./AccountContext";
-import UserData from "./components/UserData";
 import { useState } from "react";
 import { Route } from "react-router-dom";
 import { BrowserRouter as Router, Routes } from "react-router-dom";
@@ -74,7 +73,7 @@ function App() {
             {/* <Route path="/Account" element={<Account />} /> */}
             <Route path="/LeftUp" element={<LeftUp />} />
             <Route
-              path="/PersonalDetails"
+              path="/LimitRequest/1"
               element={
                 <PersonalDetails
                   // active={active}
@@ -87,7 +86,7 @@ function App() {
               }
             />
             <Route
-              path="/ContactDetails"
+              path="/LimitRequest/2"
               element={
                 <ContactDetails
                   number={details.number}
@@ -98,7 +97,7 @@ function App() {
               }
             />
             <Route
-              path="/WorkDetails"
+              path="/LimitRequest/3"
               element={
                 <WorkDetails
                   workPlace={details.workPlace}
@@ -110,7 +109,7 @@ function App() {
               }
             />
             <Route
-              path="/LimitRequest"
+              path="/LimitRequest/4"
               element={
                 <LimitRequest
                   amount={details.amount}
@@ -119,7 +118,6 @@ function App() {
                 />
               }
             />
-            <Route path="/UserData" element={<UserData />} />
           </Routes>
         </Router>
       </AccountContext.Provider>

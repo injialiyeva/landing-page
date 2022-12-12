@@ -1,19 +1,12 @@
 import React, { useState, useContext } from "react";
+import { useNavigate } from "react-router-dom";
 import LeftUp from "../../pages/LimitRequestLeftUp/LeftUp";
 import { AccountContext } from "../../AccountContext";
 import "../../pages/LimitRequestLeftUp/leftUp.scss";
 import "../PersonalDetails/personalDetails.scss";
 
 function PersonalDetails({ name, fin, surname, fatherName, changeDetails }) {
-  // const message = useContext(AccountContext);
-
-  // const [details, setDetails] = useState({
-  //   name: "",
-  //   fin: "",
-  //   surname: "",
-  //   fatherName: "",
-  // });
-
+  const navigate = useNavigate();
   const handleChange = (e) => {
     const { name, value } = e.target;
     changeDetails(value);
@@ -30,6 +23,18 @@ function PersonalDetails({ name, fin, surname, fatherName, changeDetails }) {
     // setActive(() => {
     //   return active + 1;
     // });
+  };
+
+  const [isActive, setIsActive] = useState(false);
+
+  const handleClick = (event) => {
+    if (!isActive) {
+      setIsActive((current) => !current);
+    }
+  };
+
+  const cancelClick = (event) => {
+    setIsActive((current) => !current);
   };
 
   return (
@@ -71,7 +76,7 @@ function PersonalDetails({ name, fin, surname, fatherName, changeDetails }) {
                       <button
                         type="button"
                         className="info-btn-personalDetails"
-                        //   onClick={handleClick}
+                        onClick={handleClick}
                       >
                         <img
                           className="popup-icon-personalDetails"
@@ -81,6 +86,33 @@ function PersonalDetails({ name, fin, surname, fatherName, changeDetails }) {
                       </button>
                     </div>
                   </label>
+                  <div className={isActive ? "fin-popup-personal-d" : "hidden"}>
+                    <div className="fin-popup-header-personal-d">
+                      <img
+                        className="fin-popup-icon-personal-d"
+                        src="/images/general icons(4).svg"
+                      />
+                      <p className="fin-nedir-personal-d">FİN nədir?</p>
+                      <button
+                        type="button"
+                        className={
+                          isActive ? "popup-cancel-personal-d" : "hidden"
+                        }
+                        onClick={cancelClick}
+                      >
+                        <img src="/images/general icons(5).svg" />
+                      </button>
+                    </div>
+                    <div className="fin-popup-txt-login">
+                      <p>
+                        FİN kod 7 simvoldan ibarətdir və axırıncı sətirdə
+                        göstərilən son səkkiz simvolun ilk yeddisi təşkil edir.
+                      </p>
+                    </div>
+                    <div>
+                      <img src="/images/vəsiqə foto.svg" />
+                    </div>
+                  </div>
                 </div>
               </div>
               <div className="personalDetails-inputs-bottom">
@@ -121,38 +153,51 @@ function PersonalDetails({ name, fin, surname, fatherName, changeDetails }) {
                   </label> */}
                   <div className="personalDetails-id-inputs">
                     <div className="personalDetails-id-input">
-                      <label htmlFor=""></label>
+                      <label htmlFor="id-input1">
+                        <div className="label">
+                          <img src="/images/pic-icon.svg" alt="" />
+                          <p>Ön üzünü yüklə</p>
+                        </div>
+                      </label>
                       <input
                         id="id-input1"
                         type="file"
                         accept="image/png, image/jpeg"
                         // onChange={handleChange}
                       />
-
-                      <img src="/images/pic-icon.svg" alt="" />
-                      <p>Ön üzünü yüklə</p>
                     </div>
                     <div className="personalDetails-id-input">
-                      <label htmlFor=""></label>
+                      <label htmlFor="id-input2">
+                        <div className="label">
+                          <img src="/images/pic-icon.svg" alt="" />
+                          <p>Arxa üzünü yüklə</p>
+                        </div>
+                      </label>
                       <input
                         id="id-input2"
                         type="file"
                         accept="image/png, image/jpeg"
                         // onChange={handleChange}
                       />
-                      <img src="/images/pic-icon.svg" alt="" />
-                      <p>Arxa üzünü yüklə</p>
                     </div>
                   </div>
                 </div>
               </div>
             </div>
             <div className="personalDetails-buttons">
-              <button className="personalDetails-skip-btn" type="submit">
+              <button
+                className="personalDetails-skip-btn"
+                type="button"
+                onClick={() => navigate("/Login")}
+              >
                 Bu mərhələni keç
               </button>
 
-              <button className="personalDetails-continue-btn" type="submit">
+              <button
+                className="personalDetails-continue-btn"
+                type="button"
+                onClick={() => navigate("/LimitRequest/2")}
+              >
                 Davam et
               </button>
             </div>

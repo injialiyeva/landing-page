@@ -1,15 +1,11 @@
 import React, { useState } from "react";
+import { useNavigate } from "react-router-dom";
 import LeftUp from "../../pages/LimitRequestLeftUp/LeftUp";
 import "../../pages/LimitRequestLeftUp/leftUp.scss";
 import "../WorkDetails/workDetails.scss";
 
 function WorkDetails({ workPlace, salary, workExp, salary2, changeDetails }) {
-  // const [details, SetDetails] = useState({
-  //   workPlace: "",
-  //   salary: "",
-  //   workExp: "",
-  //   salary2: "",
-  // });
+  const navigate = useNavigate();
 
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -97,11 +93,19 @@ function WorkDetails({ workPlace, salary, workExp, salary2, changeDetails }) {
               </p>
             </div>
             <div className="workDetails-buttons">
-              <button type="submit" className="workDetails-back-btn">
+              <button
+                type="button"
+                className="workDetails-back-btn"
+                onClick={() => navigate("/LimitRequest/2")}
+              >
                 <img src="/images/general icons.svg" alt="" />
                 Geri
               </button>
-              <button type="submit" className="workDetails-continue-btn">
+              <button
+                type="button"
+                className="workDetails-continue-btn"
+                onClick={() => navigate("/LimitRequest/4")}
+              >
                 Davam et
               </button>
             </div>
