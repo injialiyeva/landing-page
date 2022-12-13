@@ -6,25 +6,6 @@ import { Link } from "react-router-dom";
 import Login from "../LoginPage/Login";
 
 function CreateAccount() {
-  // const [list, getList] = useState("");
-
-  // const url =
-  //   "http://172.16.10.132:3574/api/v1/db/data/v1/FerrumCapital-test/users?limit=25&shuffle=0&offset=0/";
-
-  // useEffect(() => {
-  //   getAllList();
-  // }, []);
-
-  // const getAllList = () => {
-  //   axios
-  //     .get(`${url}fin`)
-  //     .then((response) => {
-  //       const allList = response.data.list.allList;
-  //       getList(allList);
-  //     })
-  //     .catch((error) => console.error(`Error: ${error}`));
-  // };
-
   const [isActive, setIsActive] = useState(false);
   const [overlayState, setOverlayState] = useState(false);
 
@@ -37,12 +18,6 @@ function CreateAccount() {
   const cancelClick = (event) => {
     setIsActive((current) => !current);
   };
-
-  // const [passwordShown, setPasswordShown] = useState(false);
-
-  // const togglePassword = () => {
-  //   setPasswordShown(!passwordShown);
-  // };
 
   const navigate = useNavigate();
 
@@ -291,7 +266,6 @@ function CreateAccount() {
         </div>
       </div>
     </div>
-    // <Login list={list} />
   );
 }
 

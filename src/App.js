@@ -60,7 +60,7 @@ function App() {
 
   return (
     <div>
-      <AccountContext.Provider value="Hellooo">
+      <AccountContext.Provider value={"test"}>
         <Router>
           <Routes>
             <Route path="/" element={<Login />} />
