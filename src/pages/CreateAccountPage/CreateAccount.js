@@ -33,11 +33,13 @@ function CreateAccount() {
       setOverlayState((current) => !current);
     }
     setOtp(!otp);
+    document.body.classList.add("overlay-body");
   };
 
   const closeOtp = () => {
     setOtp(false);
     setOverlayState(false);
+    document.body.classList.remove("overlay-body");
   };
 
   const handleFocus = (e) => {

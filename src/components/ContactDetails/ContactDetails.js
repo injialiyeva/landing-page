@@ -1,5 +1,6 @@
 import React from "react";
 import { useState } from "react";
+import Select from "react-select";
 import { useNavigate } from "react-router-dom";
 import LeftUp from "../../pages/LimitRequestLeftUp/LeftUp";
 import "../../pages/LimitRequestLeftUp/leftUp.scss";
@@ -21,6 +22,14 @@ function ContactDetails({ number, email, number2, changeDetails }) {
 
     // console.log();
   };
+
+  const options = [
+    { value: "whatsapp", label: "Whatsapp" },
+    { value: "skype", label: "Skype" },
+    { value: "messenger", label: "Messenger" },
+    { value: "telegram", label: "Telegram" },
+    { value: "other", label: "Other" },
+  ];
 
   return (
     <div>
@@ -76,16 +85,7 @@ function ContactDetails({ number, email, number2, changeDetails }) {
                 </div>
                 <div className="contactDetails-contact-type">
                   Sizinlə necə əlaqə saxlayaq?
-                  <label htmlFor="">
-                    Əlaqə vasitəsini seçin
-                    <select name="">
-                      <option value=""></option>
-                      <option value=""></option>
-                      <option value=""></option>
-                      <option value=""></option>
-                      <option value=""></option>
-                    </select>
-                  </label>
+                  <Select options={options} />
                 </div>
               </div>
             </div>

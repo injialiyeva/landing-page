@@ -86,33 +86,6 @@ function PersonalDetails({ name, fin, surname, fatherName, changeDetails }) {
                       </button>
                     </div>
                   </label>
-                  <div className={isActive ? "fin-popup-personal-d" : "hidden"}>
-                    <div className="fin-popup-header-personal-d">
-                      <img
-                        className="fin-popup-icon-personal-d"
-                        src="/images/general icons(4).svg"
-                      />
-                      <p className="fin-nedir-personal-d">FİN nədir?</p>
-                      <button
-                        type="button"
-                        className={
-                          isActive ? "popup-cancel-personal-d" : "hidden"
-                        }
-                        onClick={cancelClick}
-                      >
-                        <img src="/images/general icons(5).svg" />
-                      </button>
-                    </div>
-                    <div className="fin-popup-txt-login">
-                      <p>
-                        FİN kod 7 simvoldan ibarətdir və axırıncı sətirdə
-                        göstərilən son səkkiz simvolun ilk yeddisi təşkil edir.
-                      </p>
-                    </div>
-                    <div>
-                      <img src="/images/vəsiqə foto.svg" />
-                    </div>
-                  </div>
                 </div>
               </div>
               <div className="personalDetails-inputs-bottom">
@@ -181,6 +154,31 @@ function PersonalDetails({ name, fin, surname, fatherName, changeDetails }) {
                       />
                     </div>
                   </div>
+                </div>
+              </div>
+              <div className={isActive ? "fin-popup-personal-d" : "hidden"}>
+                <div className="fin-popup-header-personal-d">
+                  <img
+                    className="fin-popup-icon-personal-d"
+                    src="/images/general icons(4).svg"
+                  />
+                  <p className="fin-nedir-personal-d">FİN nədir?</p>
+                  <button
+                    type="button"
+                    className={isActive ? "popup-cancel-personal-d" : "hidden"}
+                    onClick={cancelClick}
+                  >
+                    <img src="/images/general icons(5).svg" />
+                  </button>
+                </div>
+                <div className="fin-popup-txt-login">
+                  <p>
+                    FİN kod 7 simvoldan ibarətdir və axırıncı sətirdə göstərilən
+                    son səkkiz simvolun ilk yeddisi təşkil edir.
+                  </p>
+                </div>
+                <div>
+                  <img src="/images/vəsiqə foto.svg" />
                 </div>
               </div>
             </div>
