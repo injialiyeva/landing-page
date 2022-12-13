@@ -48,6 +48,7 @@ function ContactDetails({ number, email, number2, changeDetails }) {
                     Mobil nömrə <span>*</span>
                     <div className="contactDetails-num-input contactDetails-input">
                       <input
+                        maxLength={12}
                         type="number"
                         required
                         name="number"
@@ -76,6 +77,7 @@ function ContactDetails({ number, email, number2, changeDetails }) {
                     Əlavə mobil nömrə
                     <div className="contactDetails-num2-input contactDetails-input">
                       <input
+                        maxLength={12}
                         type="number"
                         name="number2"
                         onChange={handleChange}

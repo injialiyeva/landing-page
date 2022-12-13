@@ -1,4 +1,4 @@
-import React, { useState, useContext } from "react";
+import React, { useState, useContext, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import LeftUp from "../../pages/LimitRequestLeftUp/LeftUp";
 import { AccountContext } from "../../AccountContext";
@@ -37,6 +37,20 @@ function PersonalDetails({ name, fin, surname, fatherName, changeDetails }) {
     setIsActive((current) => !current);
   };
 
+  const [images, setImages] = useState([]);
+  const [imageURLs, setImageURLs] = useState([]);
+
+  useEffect(() => {
+    if (images.length < 1) return;
+    const newImageURLs = [];
+    images.forEach((image) => newImageURLs.push(URL.createObjectURL(image)));
+    setImageURLs(newImageURLs);
+  }, [images]);
+
+  function onImageChange(e) {
+    setImages([...e.target.files]);
+  }
+
   return (
     <div>
       {/* <div>{message}</div> */}
@@ -71,6 +85,7 @@ function PersonalDetails({ name, fin, surname, fatherName, changeDetails }) {
                         type="text"
                         required
                         name="fin"
+                        maxLength={7}
                         onChange={handleChange}
                       />
                       <button
@@ -136,8 +151,11 @@ function PersonalDetails({ name, fin, surname, fatherName, changeDetails }) {
                         id="id-input1"
                         type="file"
                         accept="image/png, image/jpeg"
-                        // onChange={handleChange}
+                        onChange={onImageChange}
                       />
+                      {imageURLs.map((imageSrc) => (
+                        <img src={imageSrc} />
+                      ))}
                     </div>
                     <div className="personalDetails-id-input">
                       <label htmlFor="id-input2">
@@ -150,8 +168,11 @@ function PersonalDetails({ name, fin, surname, fatherName, changeDetails }) {
                         id="id-input2"
                         type="file"
                         accept="image/png, image/jpeg"
-                        // onChange={handleChange}
+                        onChange={onImageChange}
                       />
+                      {imageURLs.map((imageSrc) => (
+                        <img src={imageSrc} />
+                      ))}
                     </div>
                   </div>
                 </div>
