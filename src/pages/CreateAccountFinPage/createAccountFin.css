@@ -6,7 +6,6 @@
 }
 
 body {
-  font-family: "Source Sans Pro", sans-serif;
   height: 100%;
   width: 100%;
   margin: 0;
@@ -89,6 +88,7 @@ body {
 }
 
 label {
+  font-family: "SF Pro Text";
   font-style: normal;
   font-weight: 400;
   font-size: 14px;
@@ -108,6 +108,7 @@ label div {
   border-radius: 12px;
   outline: none;
   padding-left: 16px;
+  font-family: "SF Pro Text";
   font-weight: 274;
   font-size: 16px;
   line-height: 24px;
@@ -120,6 +121,7 @@ label div {
 .error-message-create-acc-fin {
   width: 267px;
   height: 16px;
+  font-family: "SF Pro Text";
   font-style: normal;
   font-weight: 400;
   font-size: 12px;
@@ -179,9 +181,11 @@ label div {
 .fin-popup-txt-create-acc-fin {
   width: 160px;
   height: 80px;
+  margin-bottom: 10px;
 }
 
 .fin-popup-txt-create-acc-fin p {
+  font-family: "SF Pro Text";
   font-style: normal;
   font-weight: 400;
   font-size: 12px;
@@ -262,6 +266,7 @@ label div {
 }
 
 .login-create-acc-fin p {
+  font-family: "SF Pro Text";
   font-style: normal;
   font-weight: 400;
   font-size: 14px;

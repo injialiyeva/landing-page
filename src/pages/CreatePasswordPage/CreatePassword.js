@@ -113,7 +113,11 @@ function CreatePassword() {
               </div>
               <div className="login-create-psw">
                 <p>
-                  Ferrum kabinetin var? <Link to={"/Login"}> Daxil ol</Link>
+                  Ferrum kabinetin var?{" "}
+                  <Link to={"/Login"}>
+                    {" "}
+                    <span> Daxil ol</span>{" "}
+                  </Link>
                 </p>
               </div>
             </form>

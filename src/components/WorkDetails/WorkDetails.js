@@ -87,9 +87,11 @@ function WorkDetails({ workPlace, salary, workExp, salary2, changeDetails }) {
               <input type="checkbox" />
               <p>
                 Məlumatların doğruluğunu təsdiq edir, kredit öhdəliklərim barədə
-                məlumatları AKB kredit reyesterindən əldə edilməsinə və
-                reyesterə ötürülməsinə, şəxsi və iş yerim üzrə məlumatları isə
-                ASAN Finans sistemi vasitəsi ilə əldə edilməsinə icazə verirəm.
+                məlumatları <span>AKB kredit</span> reyesterindən əldə
+                edilməsinə və reyesterə ötürülməsinə, şəxsi və iş yerim üzrə
+                məlumatları isə
+                <span> ASAN Finans</span> sistemi vasitəsi ilə əldə edilməsinə
+                icazə verirəm.
               </p>
             </div>
             <div className="workDetails-buttons">

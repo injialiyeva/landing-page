@@ -11,6 +11,7 @@
 }
 
 label {
+  font-family: "SF Pro Text";
   font-style: normal;
   font-weight: 400;
   font-size: 14px;
@@ -75,6 +76,7 @@ span {
         border-radius: 3px;
       }
       p {
+        font-family: "SF Pro Text";
         font-style: normal;
         font-weight: 400;
         font-size: 14px;
@@ -226,7 +228,7 @@ textarea {
     p {
       width: 373px;
       height: 48px;
-      // font-family: "SF Pro Text";
+      font-family: "SF Pro Text";
       font-style: normal;
       font-weight: 400;
       font-size: 16px;

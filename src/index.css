@@ -10,3 +10,31 @@ body {
   list-style: none;
   scroll-behavior: smooth;
 }
+
+@font-face {
+  font-family: "SF Pro Text";
+  src: url("../public/fonts/SFProText/SF\ Pro\ Text\ Light.woff2")
+    format("opentype");
+  font-weight: 300;
+}
+
+@font-face {
+  font-family: "SF Pro Text";
+  src: url("../public/fonts/SFProText/SF\ Pro\ Text\ Regular.woff2")
+    format("opentype");
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: "SF Pro Text";
+  src: url("../public/fonts/SFProText/SF_Pro_Text_Medium.woff2")
+    format("opentype");
+  font-weight: 500;
+}
+
+@font-face {
+  font-family: "SF Pro Text";
+  src: url("../public/fonts/SFProText/SF\ Pro\ Text\ Semibold.woff2")
+    format("opentype");
+  font-weight: 600;
+}
