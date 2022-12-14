@@ -4,24 +4,6 @@ import { Link } from "react-router-dom";
 import { useNavigate } from "react-router-dom";
 
 function ResetPassword() {
-  // const [isActive, setIsActive] = useState(false);
-
-  // const handleClick = (event) => {
-  //   if (!isActive) {
-  //     setIsActive((current) => !current);
-  //   }
-  // };
-
-  // const cancelClick = (event) => {
-  //   setIsActive((current) => !current);
-  // };
-
-  // const [passwordShown, setPasswordShown] = useState(false);
-
-  // const togglePassword = () => {
-  //   setPasswordShown(!passwordShown);
-  // };
-
   const navigate = useNavigate();
 
   const handleSubmit = (event) => {
@@ -75,13 +57,6 @@ function ResetPassword() {
                   required
                   placeholder="+994 (50) 123 45 67"
                 />
-                {/* <button type="button" className="info-btn-reset-psw" onClick={handleClick}>
-                <img
-                  className="popup-icon-reset-psw"
-                  src="/images/general icons (2).svg"
-                  alt=""
-                />
-              </button> */}
               </div>
 
               <div className="submit-reset-psw">

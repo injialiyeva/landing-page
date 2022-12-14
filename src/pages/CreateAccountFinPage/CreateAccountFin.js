@@ -17,12 +17,6 @@ function CreateAccountFin() {
     setIsActive((current) => !current);
   };
 
-  // const [passwordShown, setPasswordShown] = useState(false);
-
-  // const togglePassword = () => {
-  //   setPasswordShown(!passwordShown);
-  // };
-
   const navigate = useNavigate();
 
   const handleSubmit = (event) => {
@@ -33,10 +27,6 @@ function CreateAccountFin() {
 
   const [errorMessage, setErrorMessage] = useState("");
   const [errorActive, setErrorActive] = useState(false);
-  //   const [toggleClass, setToggleClass] = useState(false);
-  //  const handleToggle = () => {
-  //       setToggleClass(!toggleClass);
-  //     };
 
   const handleFinChange = (event) => {
     // console.log(event.target.value.length);

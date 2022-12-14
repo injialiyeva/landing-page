@@ -4,18 +4,6 @@ import { Link } from "react-router-dom";
 import { useNavigate } from "react-router-dom";
 
 function PasswordChange() {
-  // const [isActive, setIsActive] = useState(false);
-
-  // const handleClick = (event) => {
-  //   if (!isActive) {
-  //     setIsActive((current) => !current);
-  //   }
-  // };
-
-  // const cancelClick = (event) => {
-  //   setIsActive((current) => !current);
-  // };
-
   const [passwordShown, setPasswordShown] = useState(false);
 
   const togglePassword = () => {
