@@ -88,7 +88,7 @@ function Login() {
                     </button>
                   </div>
                 </label>
-                <div className={isActive ? "fin-popup-login" : "hidden"}>
+                <div className={isActive ? "fin-popup-login" : "hidden-login"}>
                   <div className="fin-popup-header-login">
                     <img
                       className="fin-popup-icon-login"
@@ -97,7 +97,9 @@ function Login() {
                     <p className="fin-nedir-login">FİN nədir?</p>
                     <button
                       type="button"
-                      className={isActive ? "popup-cancel-login" : "hidden"}
+                      className={
+                        isActive ? "popup-cancel-login" : "hidden-login"
+                      }
                       onClick={cancelClick}
                     >
                       <img src="/images/general icons(5).svg" />

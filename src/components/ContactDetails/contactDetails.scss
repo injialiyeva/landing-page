@@ -211,6 +211,38 @@ span {
   border: none !important;
 }
 
-.hidden {
+.hidden-cd {
   display: none;
+}
+
+.social-media-input-div {
+  border: 1px solid red;
+  position: absolute;
+  top: 129px;
+  left: 355px;
+  z-index: 5;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  gap: 16px;
+  width: 334px;
+  height: 48px;
+  border-radius: 10px;
+  display: none;
+  .social-media-input {
+    border: 1px solid blue;
+    margin-top: 12px;
+    margin-left: 44px;
+    outline: none;
+    height: 24px;
+    width: auto;
+    z-index: 6;
+    display: none;
+  }
+  .input-cancel {
+    margin-top: 16px;
+    margin-left: 82px;
+    z-index: 7;
+    display: none;
+  }
 }

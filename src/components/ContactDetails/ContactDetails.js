@@ -31,11 +31,6 @@ function ContactDetails({ number, email, number2, changeDetails }) {
     { value: "other", label: "Digər" },
   ];
 
-  const [optionsIcons, setOptionsIcons] = useState(false);
-  const handleSelect = (event) => {
-    setOptionsIcons(!optionsIcons);
-  };
-
   return (
     <div>
       <div className="contactDetails-main-con">
@@ -90,13 +85,37 @@ function ContactDetails({ number, email, number2, changeDetails }) {
                     </div>
                   </label>
                 </div>
-                <div
-                  className="contactDetails-contact-type"
-                  onClick={handleSelect}
-                >
+                <div className="social-media-input-div">
+                  <input type="text" className="social-media-input" />
+                  <svg
+                    className="input-cancel"
+                    width="16"
+                    height="16"
+                    viewBox="0 0 16 16"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M4 12L12 4"
+                      stroke="#4E4F51"
+                      strokeWidth="1.5"
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                    />
+                    <path
+                      d="M12 12L4 4"
+                      stroke="#4E4F51"
+                      strokeWidth="1.5"
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                    />
+                  </svg>
+                </div>
+
+                <div className="contactDetails-contact-type">
                   Sizinlə necə əlaqə saxlayaq?
                   <Select options={options} />
-                  <div className={optionsIcons ? "option-icons" : "hidden"}>
+                  <div className="option-icons">
                     <div className="option-icon">
                       <svg
                         width="24"
