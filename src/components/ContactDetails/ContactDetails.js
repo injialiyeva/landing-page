@@ -1,5 +1,5 @@
 import React from "react";
-import { useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import Select from "react-select";
 import { useNavigate } from "react-router-dom";
 import LeftUp from "../../pages/LimitRequestLeftUp/LeftUp";
@@ -111,8 +111,8 @@ function ContactDetails({ number, email, number2, changeDetails }) {
                           fill="#EBF1FF"
                         />
                         <path
-                          fill-rule="evenodd"
-                          clip-rule="evenodd"
+                          fillRule="evenodd"
+                          clipRule="evenodd"
                           d="M12 17.5C15.0376 17.5 17.5 15.0376 17.5 12C17.5 8.96243 15.0376 6.5 12 6.5C8.96243 6.5 6.5 8.96243 6.5 12C6.5 12.9864 6.75968 13.9122 7.2144 14.7127L6.5 17.5L9.3737 16.8336C10.1541 17.2586 11.0489 17.5 12 17.5ZM12 16.6538C14.5702 16.6538 16.6538 14.5702 16.6538 12C16.6538 9.42975 14.5702 7.34615 12 7.34615C9.42975 7.34615 7.34615 9.42975 7.34615 12C7.34615 12.9924 7.65677 13.9122 8.18608 14.6676L7.76923 16.2308L9.35997 15.8331C10.1101 16.3507 11.0197 16.6538 12 16.6538Z"
                           fill="#EBF1FF"
                         />
@@ -131,7 +131,7 @@ function ContactDetails({ number, email, number2, changeDetails }) {
                         xmlns="http://www.w3.org/2000/svg"
                       >
                         <rect width="24" height="24" rx="12" fill="#2173F0" />
-                        <g clip-path="url(#clip0_1204_11040)">
+                        <g clipPath="url(#clip0_1204_11040)">
                           <ellipse
                             cx="9.6428"
                             cy="9.42851"
@@ -177,10 +177,10 @@ function ContactDetails({ number, email, number2, changeDetails }) {
                         xmlns="http://www.w3.org/2000/svg"
                       >
                         <rect width="24" height="24" rx="12" fill="#00B1FF" />
-                        <g clip-path="url(#clip0_1204_11050)">
+                        <g clipPath="url(#clip0_1204_11050)">
                           <path
-                            fill-rule="evenodd"
-                            clip-rule="evenodd"
+                            fillRule="evenodd"
+                            clipRule="evenodd"
                             d="M12 17.1527C15.0376 17.1527 17.5 14.768 17.5 11.8264C17.5 8.88469 15.0376 6.5 12 6.5C8.96243 6.5 6.5 8.88469 6.5 11.8264C6.5 13.4263 7.22841 14.8614 8.38158 15.8378V16.9156C8.38158 17.3369 8.81068 17.6195 9.19326 17.4501L10.3893 16.9207C10.8987 17.0715 11.4396 17.1527 12 17.1527Z"
                             fill="white"
                           />
