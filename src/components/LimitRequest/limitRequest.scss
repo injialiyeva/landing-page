@@ -1,3 +1,8 @@
+// @font-face {
+//   font-family: "SF Pro Text";
+//   src: url(/public/fonts/SFProText/SF_Pro_Text_Medium.woff2) format("woff2");
+// }
+
 .limitRequest-main-con {
   width: 100%;
   height: 100%;
@@ -301,13 +306,53 @@ textarea {
   height: 40px;
 }
 
-// .date-range {
-//   div:first-child {
-//     // border: 1px solid red !important;
-//     width: 245px !important;
-//     height: 40px !important;
-//     background: #fafbff !important;
-//     border: 1px solid #ebf1ff !important;
-//     border-radius: 43px !important;
-//   }
-// }
+.date-range {
+  border: none;
+  div {
+    // border: none;
+    background: #fafbff;
+    border: 1px solid #ebf1ff;
+    border-radius: 43px;
+    div {
+      border: none;
+      :nth-child(2) {
+        // border: 1px solid red;
+        border-radius: 0 43px 43px 0 !important;
+        background: #fafbff;
+        border: 1px solid #ebf1ff;
+        svg {
+          z-index: 2;
+        }
+      }
+      :nth-child(2)::after {
+        border-radius: 0 43px 43px 0 !important;
+        background: #fafbff;
+        border: 1px solid #ebf1ff;
+      }
+      :nth-child(2)::before {
+        border-radius: 0 43px 43px 0 !important;
+        background: #fafbff;
+        border: 1px solid #ebf1ff;
+      }
+      div {
+        div {
+          div {
+            border: none;
+            :nth-child(1) {
+              border: none;
+            }
+            :nth-child(2) {
+              border: none;
+            }
+            :nth-child(2)::before {
+              border: none;
+            }
+            :nth-child(3) {
+              border: none;
+            }
+          }
+        }
+      }
+    }
+  }
+}
