@@ -2,7 +2,9 @@ import React, { useState, useContext, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import LeftUp from "../../pages/LimitRequestLeftUp/LeftUp";
 import { AccountContext } from "../../AccountContext";
-import { useSelector, useDispatch, useHistory } from "react-redux";
+import { addName } from "../../store/inputSlice";
+import { useSelector, useDispatch } from "react-redux";
+import { useForm } from "react-hook-form";
 import "../../pages/LimitRequestLeftUp/leftUp.scss";
 import "../PersonalDetails/personalDetails.scss";
 
@@ -10,25 +12,30 @@ import "../PersonalDetails/personalDetails.scss";
 
 function PersonalDetails() {
   const dispatch = useDispatch();
-  const history = useHistory();
-  const name = useSelector((state) => state.name);
-
   const navigate = useNavigate();
+  const name = useSelector((state) => state.name);
+  const { handleSubmit } = useForm({ defaultValues: { name } });
+
+  const onSubmit = (data) => {
+    Next();
+    Previous();
+  };
+
+  const Next = (data) => {
+    dispatch(addName(data.name));
+    navigate("/LimitRequest/2");
+  };
+
+  const Previous = (data) => {
+    dispatch(addName(data.name));
+    navigate("/Login");
+  };
+
   const handleChange = (e) => {
     const { name, value } = e.target;
     // changeDetails(value);
-
     // setDetails((prev) => {
     //   return { ...prev, [name]: value };
-    // });
-  };
-
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    // console.log(details);
-
-    // setActive(() => {
-    //   return active + 1;
     // });
   };
 
@@ -67,7 +74,7 @@ function PersonalDetails() {
           <form
             action=""
             className="personalDetails-form"
-            onSubmit={handleSubmit}
+            onSubmit={handleSubmit(onSubmit)}
           >
             <div className="personalDetails-inputs">
               <div className="personalDetails-inputs-name-fin">
@@ -78,7 +85,7 @@ function PersonalDetails() {
                       <input
                         type="text"
                         required
-                        name="name"
+                        id="name"
                         onChange={handleChange}
                       />
                     </div>
@@ -91,7 +98,7 @@ function PersonalDetails() {
                       <input
                         type="text"
                         required
-                        name="fin"
+                        id="fin"
                         maxLength={7}
                         onChange={handleChange}
                       />
@@ -119,7 +126,7 @@ function PersonalDetails() {
                         <input
                           type="text"
                           required
-                          name="surname"
+                          id="surname"
                           onChange={handleChange}
                         />
                       </div>
@@ -132,7 +139,7 @@ function PersonalDetails() {
                         <input
                           type="text"
                           required
-                          name="fatherName"
+                          id="fatherName"
                           onChange={handleChange}
                         />
                       </div>
@@ -214,7 +221,7 @@ function PersonalDetails() {
               <button
                 className="personalDetails-skip-btn"
                 type="button"
-                onClick={() => navigate("/Login")}
+                onClick={Previous()}
               >
                 Bu mərhələni keç
               </button>
@@ -222,7 +229,8 @@ function PersonalDetails() {
               <button
                 className="personalDetails-continue-btn"
                 type="button"
-                onClick={() => navigate("/LimitRequest/2")}
+                // onClick={() => navigate("/LimitRequest/2")}
+                onClick={Next()}
               >
                 Davam et
               </button>
