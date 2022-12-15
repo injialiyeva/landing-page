@@ -60,67 +60,67 @@ function App() {
 
   return (
     <div>
-      <AccountContext.Provider value={"test"}>
-        <Router>
-          <Routes>
-            <Route path="/" element={<Login />} />
-            <Route path="/Login" element={<Login />} />
-            <Route path="/CreateAccount" element={<CreateAccount />} />
-            <Route path="/CreateAccountFin" element={<CreateAccountFin />} />
-            <Route path="/PasswordChange" element={<PasswordChange />} />
-            <Route path="/ResetPassword" element={<ResetPassword />} />
-            <Route path="/CreatePassword" element={<CreatePassword />} />
-            {/* <Route path="/Account" element={<Account />} /> */}
-            <Route path="/LeftUp" element={<LeftUp />} />
-            <Route
-              path="/LimitRequest/1"
-              element={
-                <PersonalDetails
-                  // active={active}
-                  name={details.name}
-                  fin={details.fin}
-                  surname={details.surname}
-                  fatherName={details.fatherName}
-                  changeDetails={setDetails}
-                />
-              }
-            />
-            <Route
-              path="/LimitRequest/2"
-              element={
-                <ContactDetails
-                  number={details.number}
-                  email={details.email}
-                  number2={details.number2}
-                  changeDetails={setDetails}
-                />
-              }
-            />
-            <Route
-              path="/LimitRequest/3"
-              element={
-                <WorkDetails
-                  workPlace={details.workPlace}
-                  salary={details.salary}
-                  workExp={details.workExp}
-                  salary2={details.salary2}
-                  changeDetails={setDetails}
-                />
-              }
-            />
-            <Route
-              path="/LimitRequest/4"
-              element={
-                <LimitRequest
-                  amount={details.amount}
-                  note={details.note}
-                  changeDetails={setDetails}
-                />
-              }
-            />
-          </Routes>
-        </Router>
-      </AccountContext.Provider>
+      {/* <AccountContext.Provider value={"test"}> */}
+      <Router>
+        <Routes>
+          <Route path="/" element={<Login />} />
+          <Route path="/Login" element={<Login />} />
+          <Route path="/CreateAccount" element={<CreateAccount />} />
+          <Route path="/CreateAccountFin" element={<CreateAccountFin />} />
+          <Route path="/PasswordChange" element={<PasswordChange />} />
+          <Route path="/ResetPassword" element={<ResetPassword />} />
+          <Route path="/CreatePassword" element={<CreatePassword />} />
+          {/* <Route path="/Account" element={<Account />} /> */}
+          <Route path="/LeftUp" element={<LeftUp />} />
+          <Route
+            path="/LimitRequest/1"
+            element={
+              <PersonalDetails
+                // active={active}
+                name={details.name}
+                fin={details.fin}
+                surname={details.surname}
+                fatherName={details.fatherName}
+                changeDetails={setDetails}
+              />
+            }
+          />
+          <Route
+            path="/LimitRequest/2"
+            element={
+              <ContactDetails
+                number={details.number}
+                email={details.email}
+                number2={details.number2}
+                changeDetails={setDetails}
+              />
+            }
+          />
+          <Route
+            path="/LimitRequest/3"
+            element={
+              <WorkDetails
+                workPlace={details.workPlace}
+                salary={details.salary}
+                workExp={details.workExp}
+                salary2={details.salary2}
+                changeDetails={setDetails}
+              />
+            }
+          />
+          <Route
+            path="/LimitRequest/4"
+            element={
+              <LimitRequest
+                amount={details.amount}
+                note={details.note}
+                changeDetails={setDetails}
+              />
+            }
+          />
+        </Routes>
+      </Router>
+      {/* </AccountContext.Provider> */}
     </div>
   );
 }

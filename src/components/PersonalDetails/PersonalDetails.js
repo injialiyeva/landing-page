@@ -2,14 +2,21 @@ import React, { useState, useContext, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import LeftUp from "../../pages/LimitRequestLeftUp/LeftUp";
 import { AccountContext } from "../../AccountContext";
+import { useSelector, useDispatch, useHistory } from "react-redux";
 import "../../pages/LimitRequestLeftUp/leftUp.scss";
 import "../PersonalDetails/personalDetails.scss";
 
-function PersonalDetails({ name, fin, surname, fatherName, changeDetails }) {
+// { name, fin, surname, fatherName, changeDetails }
+
+function PersonalDetails() {
+  const dispatch = useDispatch();
+  const history = useHistory();
+  const name = useSelector((state) => state.name);
+
   const navigate = useNavigate();
   const handleChange = (e) => {
     const { name, value } = e.target;
-    changeDetails(value);
+    // changeDetails(value);
 
     // setDetails((prev) => {
     //   return { ...prev, [name]: value };

@@ -31,6 +31,15 @@ function ContactDetails({ number, email, number2, changeDetails }) {
     { value: "other", label: "Digər" },
   ];
 
+  const [selectedOption, setSelectedOption] = useState(options);
+
+  const showInput = () => {
+    setSelectedOption((previousState) => !previousState);
+  };
+
+  // const [showInput, setShowInput] = useState(false);
+  // const onClick = () => setShowInput(true);
+
   return (
     <div>
       <div className="contactDetails-main-con">
@@ -85,6 +94,11 @@ function ContactDetails({ number, email, number2, changeDetails }) {
                     </div>
                   </label>
                 </div>
+
+                {/* {showInput ? (
+                 
+                ) : null} */}
+
                 <div className="social-media-input-div">
                   <input type="text" className="social-media-input" />
                   <svg
@@ -114,7 +128,12 @@ function ContactDetails({ number, email, number2, changeDetails }) {
 
                 <div className="contactDetails-contact-type">
                   Sizinlə necə əlaqə saxlayaq?
-                  <Select options={options} />
+                  <Select
+                    options={options}
+                    // onClick={onClick}
+                    defaultValue={selectedOption}
+                    onChange={showInput}
+                  />
                   <div className="option-icons">
                     <div className="option-icon">
                       <svg
